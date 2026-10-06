@@ -1,0 +1,37 @@
+<!--meta {"title":"Contact | RAED Technologies","description":"Talk to RAED Technologies in Dhaka, Bangladesh about custom software, web applications, automation, AI solutions, integration or cloud projects.","nav":"contact","path":"/contact/"} -->
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Contact</p>
+    <h1>Let's Build Something Meaningful.</h1>
+    <p class="lead">Tell us about your idea, challenge, or the process you want to improve. We read every inquiry and reply with clear next steps.</p>
+  </div>
+</section>
+
+<section class="section ct" aria-labelledby="ct-form-title">
+  <div class="container ct__layout">
+    <div class="ct__aside" data-reveal>
+      <h2 class="ct__title" id="ct-form-title">Get in touch</h2>
+      <p class="muted ct__intro">Reach us directly, or share a few details through the form and we'll come back with questions or a proposed next step.</p>
+      <!-- @include partials/contact-info.html -->
+    </div>
+    <div class="ct__form" data-reveal>
+      <!-- @include partials/contact-form.html -->
+    </div>
+  </div>
+</section>
+
+<section class="section section--gray section--tight ct-topics" aria-labelledby="ct-topics-title">
+  <div class="container">
+    <div class="section-head section-head--row">
+      <div>
+        <p class="eyebrow">What we can help with</p>
+        <h2 id="ct-topics-title">Business inquiry categories</h2>
+      </div>
+      <p class="muted ct-topics__note">Pick a category to start your inquiry. Not sure where your project fits? Choose "Other" and describe it — we'll help shape it.</p>
+    </div>
+    <ul class="ct-chips" data-reveal>
+<!-- @each inquiryTypes components/inquiry-chip.html -->
+    </ul>
+    <p class="ct-careers">Careers: <a href="mailto:{{site.emailHr}}">{{site.emailHr}}</a></p>
+  </div>
+</section>

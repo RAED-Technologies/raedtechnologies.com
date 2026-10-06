@@ -1,0 +1,402 @@
+{
+  "site": {
+    "name": "RAED Technologies",
+    "url": "https://raedtechnologies.com",
+    "phone": "+880 1705-942721",
+    "phoneHref": "tel:+8801705942721",
+    "emailInfo": "info@raedtechnologies.com",
+    "emailDev": "dev@raedtechnologies.com",
+    "emailHr": "hr@raedtechnologies.com",
+    "location": "Dhaka, Bangladesh",
+    "tagline": "Digital Solutions. Intelligent Automation. Software Engineering.",
+    "year": "2026",
+    "city": "Dhaka",
+    "countryCode": "BD",
+    "formAction": "https://formsubmit.co/dev@raedtechnologies.com",
+    "formAjax": "https://formsubmit.co/ajax/dev@raedtechnologies.com"
+  },
+  "services": [
+    {
+      "id": "custom-software",
+      "icon": "code",
+      "title": "Custom Software Development",
+      "short": "Purpose-built software designed around specific business requirements, workflows, and operational goals.",
+      "long": "When off-the-shelf tools force your business to adapt to them, custom software does the opposite. We design and build applications around how your organization actually works.",
+      "caps": [
+        "Requirements analysis and solution design",
+        "Desktop, web, and cross-platform applications",
+        "Domain-specific business logic",
+        "Modernization of legacy software",
+        "Long-term maintenance and enhancement"
+      ]
+    },
+    {
+      "id": "web-applications",
+      "icon": "browser",
+      "title": "Web Application Development",
+      "short": "Modern, responsive web applications built for performance, usability, security, and long-term maintainability.",
+      "long": "Web applications that work across devices, load quickly, and stay maintainable as features grow — from customer-facing portals to internal tools.",
+      "caps": [
+        "Responsive interfaces for every screen size",
+        "Secure authentication and role-based access",
+        "Performance-focused frontend engineering",
+        "Scalable backend services and APIs",
+        "Accessible, usable interface design"
+      ]
+    },
+    {
+      "id": "business-systems",
+      "icon": "layers",
+      "title": "Business Management Systems",
+      "short": "Connected digital platforms that help organizations manage information, workflows, operations, and processes more efficiently.",
+      "long": "Bring scattered spreadsheets, documents, and disconnected tools into one structured platform that gives teams a single, reliable source of information.",
+      "caps": [
+        "Centralized data and record management",
+        "Workflow and approval processes",
+        "Role-based dashboards and reporting",
+        "Modular design that grows with the organization",
+        "Integration with existing tools"
+      ]
+    },
+    {
+      "id": "automation",
+      "icon": "workflow",
+      "title": "Automation",
+      "short": "Transform repetitive manual processes into efficient automated workflows that save time and reduce operational friction.",
+      "long": "We identify repetitive, error-prone tasks and replace them with dependable automated workflows, so people can focus on work that needs human judgment.",
+      "caps": [
+        "Process analysis and automation mapping",
+        "Automated data entry, transfer, and validation",
+        "Scheduled jobs and event-driven workflows",
+        "Automated notifications and document generation",
+        "Monitoring and exception handling"
+      ]
+    },
+    {
+      "id": "ai-solutions",
+      "icon": "spark",
+      "title": "AI-Powered Solutions",
+      "short": "Apply modern AI capabilities to create intelligent workflows, analysis tools, assistants, and smarter digital experiences.",
+      "long": "We apply AI where it creates measurable value — integrating modern language and analysis models into practical tools, with clear boundaries and human oversight.",
+      "caps": [
+        "AI assistants and conversational interfaces",
+        "Document understanding and information extraction",
+        "Intelligent search and knowledge tools",
+        "AI-enhanced workflows and decision support",
+        "Responsible integration with human review"
+      ]
+    },
+    {
+      "id": "integration",
+      "icon": "plug",
+      "title": "API & System Integration",
+      "short": "Connect applications, services, data sources, and third-party platforms into reliable digital ecosystems.",
+      "long": "Disconnected systems create duplicate work and inconsistent data. We connect them so information flows reliably where it is needed.",
+      "caps": [
+        "REST API design and development",
+        "Third-party service and platform integration",
+        "Data synchronization between systems",
+        "Secure, well-documented interfaces",
+        "Error handling and integration monitoring"
+      ]
+    },
+    {
+      "id": "cloud",
+      "icon": "cloud",
+      "title": "Cloud & Infrastructure",
+      "short": "Build reliable cloud-based foundations designed for security, performance, availability, and scalability.",
+      "long": "The right infrastructure keeps applications fast, available, and secure. We plan, deploy, and maintain cloud foundations sized for real needs.",
+      "caps": [
+        "Cloud deployment and environment setup",
+        "CI/CD pipelines and release automation",
+        "Storage, backup, and recovery planning",
+        "Infrastructure security practices",
+        "Monitoring, logging, and alerting"
+      ]
+    },
+    {
+      "id": "digital-transformation",
+      "icon": "refresh",
+      "title": "Digital Transformation",
+      "short": "Modernize manual or fragmented processes through connected software, automation, and data-driven technology.",
+      "long": "Transformation is not about adopting technology for its own sake. We help organizations move step by step from manual, fragmented processes to connected digital operations.",
+      "caps": [
+        "Assessment of current processes and tools",
+        "Phased modernization roadmaps",
+        "Digitization of paper and manual workflows",
+        "Change-friendly rollout and adoption support",
+        "Data-driven operational visibility"
+      ]
+    },
+    {
+      "id": "consulting",
+      "icon": "compass",
+      "title": "Technology Consulting",
+      "short": "Translate business challenges into practical technology strategies, architecture, and implementation plans.",
+      "long": "Before building, it helps to know what to build. We help translate business goals into clear technical direction and realistic implementation plans.",
+      "caps": [
+        "Technology strategy and solution planning",
+        "Software architecture design and review",
+        "Build, buy, or integrate evaluations",
+        "Technical scoping and estimation",
+        "Implementation roadmaps"
+      ]
+    }
+  ],
+  "solutions": [
+    {
+      "id": "digital-platforms",
+      "icon": "grid",
+      "title": "Digital Platforms",
+      "short": "Custom platforms designed around unique business requirements.",
+      "long": "When a business model or service needs a dedicated digital home, we design platforms that reflect its specific rules, users, and growth plans.",
+      "challenge": "Generic tools that don't fit how the business operates."
+    },
+    {
+      "id": "operational-systems",
+      "icon": "layers",
+      "title": "Operational Systems",
+      "short": "Software that brings workflows, information, and processes into one connected environment.",
+      "long": "Operational systems replace scattered tools with one structured environment, so teams work from the same information and processes stay consistent.",
+      "challenge": "Information spread across spreadsheets, messages, and disconnected tools."
+    },
+    {
+      "id": "automation-solutions",
+      "icon": "workflow",
+      "title": "Automation Solutions",
+      "short": "Automated workflows that reduce repetitive work and improve efficiency.",
+      "long": "We automate the predictable, repetitive parts of work — moving data, generating documents, triggering actions — with clear monitoring when exceptions occur.",
+      "challenge": "Hours lost to repetitive manual tasks and avoidable errors."
+    },
+    {
+      "id": "intelligent-applications",
+      "icon": "spark",
+      "title": "Intelligent Applications",
+      "short": "Applications enhanced with AI, data, and intelligent decision-support capabilities.",
+      "long": "Applications that understand documents, answer questions, surface patterns, and support decisions — designed with transparency and human oversight.",
+      "challenge": "Too much information and too little time to act on it."
+    },
+    {
+      "id": "integrated-systems",
+      "icon": "plug",
+      "title": "Integrated Systems",
+      "short": "Connected applications and services that allow information to move reliably across the technology ecosystem.",
+      "long": "We connect existing applications and services through reliable integrations, eliminating duplicate entry and keeping data consistent across systems.",
+      "challenge": "Systems that don't talk to each other, creating duplicate work."
+    },
+    {
+      "id": "data-insights",
+      "icon": "chart",
+      "title": "Data & Insights",
+      "short": "Systems that organize information and turn operational data into useful insights.",
+      "long": "We structure operational data and build reporting that turns it into clear, timely insight for better decisions.",
+      "challenge": "Data that exists but is hard to find, trust, or use."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Discover",
+      "text": "Understand the business, requirements, users, challenges, and goals.",
+      "id": "discover",
+      "intro": "We start with the business, not the technology — how work happens today, who is involved, and what needs to change.",
+      "happens": [
+        "Conversations with stakeholders and the people who will use the system",
+        "Review of current processes, tools, and data",
+        "Identification of constraints, risks, and priorities"
+      ],
+      "gets": [
+        "A shared understanding of the problem and objectives",
+        "Documented requirements and key user needs",
+        "A clear definition of what success looks like"
+      ]
+    },
+    {
+      "title": "Plan",
+      "text": "Define the product scope, architecture, technology strategy, and implementation approach.",
+      "id": "plan",
+      "intro": "We turn what we learned into a concrete plan: what to build, how it will be structured, and in what order.",
+      "happens": [
+        "Scope definition and a prioritized feature set",
+        "Architecture and technical approach",
+        "Delivery phases, milestones, and responsibilities"
+      ],
+      "gets": [
+        "An agreed scope with clear priorities",
+        "Solution architecture and technical direction",
+        "A realistic roadmap and estimate"
+      ]
+    },
+    {
+      "title": "Build",
+      "text": "Develop the solution using modern engineering practices and technologies.",
+      "id": "build",
+      "intro": "We develop in focused, visible iterations, so progress can be reviewed early and direction adjusted before change becomes costly.",
+      "happens": [
+        "Iterative development in small, reviewable increments",
+        "Code review and consistent engineering practices",
+        "Regular demos and progress updates"
+      ],
+      "gets": [
+        "Working software you can see and test as it develops",
+        "Visibility into progress, decisions, and trade-offs",
+        "A structured, maintainable codebase"
+      ]
+    },
+    {
+      "title": "Validate",
+      "text": "Test functionality, reliability, security, usability, and performance.",
+      "id": "validate",
+      "intro": "Before anything reaches real users, we verify that it works as intended — functionally, securely, and under realistic conditions.",
+      "happens": [
+        "Functional, integration, and regression testing",
+        "Security, performance, and usability checks",
+        "Acceptance review with your team"
+      ],
+      "gets": [
+        "Confidence that the system behaves as specified",
+        "Issues found and resolved before launch",
+        "A controlled, well-prepared release"
+      ]
+    },
+    {
+      "title": "Evolve",
+      "text": "Continue improving the solution as the business and its requirements grow.",
+      "id": "evolve",
+      "intro": "Launch is a starting point. We support, maintain, and improve the solution as your business and its requirements change.",
+      "happens": [
+        "Deployment, monitoring, and post-launch support",
+        "Maintenance, updates, and performance tuning",
+        "Planning and delivery of new improvements"
+      ],
+      "gets": [
+        "A stable system running in production",
+        "A dependable partner for ongoing change",
+        "A solution that grows with the business"
+      ]
+    }
+  ],
+  "principles": [
+    {
+      "icon": "scale",
+      "title": "Scalable Architecture",
+      "text": "Design systems with future growth and changing requirements in mind."
+    },
+    {
+      "icon": "code",
+      "title": "Maintainable Engineering",
+      "text": "Keep codebases structured, understandable, and easier to evolve."
+    },
+    {
+      "icon": "shield",
+      "title": "Security by Design",
+      "text": "Treat authentication, authorization, data protection, and secure development as core engineering concerns."
+    },
+    {
+      "icon": "gauge",
+      "title": "Performance & Reliability",
+      "text": "Build applications with responsiveness, stability, and operational reliability in mind."
+    }
+  ],
+  "reasons": [
+    {
+      "icon": "target",
+      "title": "Business First",
+      "text": "We begin with the problem and the business objective, then choose the right technology to solve it."
+    },
+    {
+      "icon": "code",
+      "title": "Engineering Driven",
+      "text": "We care about architecture, maintainability, security, performance, and long-term reliability."
+    },
+    {
+      "icon": "spark",
+      "title": "Practical Innovation",
+      "text": "We use modern technologies—including AI and automation—where they create real value."
+    },
+    {
+      "icon": "refresh",
+      "title": "Built to Evolve",
+      "text": "We design solutions that can adapt as requirements, users, and businesses grow."
+    }
+  ],
+  "capabilities": [
+    {
+      "icon": "code",
+      "title": "Software Engineering",
+      "items": [
+        "Backend Development",
+        "Frontend Development",
+        "REST APIs",
+        "Application Architecture",
+        "Database Systems",
+        "Web Applications"
+      ]
+    },
+    {
+      "icon": "cloud",
+      "title": "Cloud & Infrastructure",
+      "items": [
+        "Cloud Deployment",
+        "Infrastructure",
+        "Storage",
+        "Security",
+        "CI/CD",
+        "Monitoring"
+      ]
+    },
+    {
+      "icon": "spark",
+      "title": "AI & Automation",
+      "items": [
+        "AI Integration",
+        "Intelligent Workflows",
+        "Process Automation",
+        "AI-Assisted Development",
+        "Intelligent Applications"
+      ]
+    },
+    {
+      "icon": "plug",
+      "title": "Integration & Data",
+      "items": [
+        "API Integration",
+        "Third-Party Services",
+        "Data Workflows",
+        "Database Integration",
+        "System Connectivity"
+      ]
+    }
+  ],
+  "inquiryTypes": [
+    {
+      "label": "Custom Software"
+    },
+    {
+      "label": "Web Application"
+    },
+    {
+      "label": "Business Management System"
+    },
+    {
+      "label": "Automation"
+    },
+    {
+      "label": "AI Solution"
+    },
+    {
+      "label": "System Integration"
+    },
+    {
+      "label": "Cloud & Infrastructure"
+    },
+    {
+      "label": "Digital Transformation"
+    },
+    {
+      "label": "Technology Consulting"
+    },
+    {
+      "label": "Other"
+    }
+  ]
+}

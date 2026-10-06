@@ -1,0 +1,37 @@
+/* Home: why / about / contact (home-assembly) */
+
+/* Why */
+.why-grid { display: grid; gap: clamp(1rem, .5rem + 1.5vw, 1.5rem); grid-template-columns: 1fr; }
+@media (min-width: 640px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1080px) { .why-grid { grid-template-columns: repeat(4, 1fr); } }
+.why-card { overflow: hidden; gap: 1rem; }
+.why-card::before { content: ""; position: absolute; inset: 0 0 auto; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .6s var(--ease); }
+.why-card:hover { border-color: var(--accent-line); box-shadow: var(--shadow); }
+.why-card:hover::before { transform: scaleX(1); }
+.why-card__top { display: flex; align-items: center; justify-content: space-between; margin-bottom: clamp(.5rem, 2vw, 1.75rem); }
+.why-card .icon-box { transition: background var(--dur) var(--ease), color var(--dur) var(--ease); }
+.why-card:hover .icon-box { background: var(--accent); color: #fff; }
+
+/* About */
+.about-home__text { display: grid; gap: 1.1rem; margin: 1.75rem 0 2.25rem; max-width: 56ch; }
+.about-home__text p { color: var(--text-2); font-size: var(--fs-base); }
+.about-home__text p:first-child { color: var(--text); font-size: var(--fs-lg); line-height: 1.55; }
+.about-home__visual { position: relative; margin: 0; aspect-ratio: 1; width: 100%; max-width: 520px; justify-self: center; border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--paper); overflow: hidden;
+  background-image: linear-gradient(var(--paper-2) 1px, transparent 1px), linear-gradient(90deg, var(--paper-2) 1px, transparent 1px); background-size: 40px 40px; background-position: center; }
+.about-home__art { position: absolute; inset: 0; width: 100%; height: 100%; }
+.about-home__rings circle { stroke: var(--line); stroke-width: 1; }
+.about-home__rings circle:nth-child(2) { stroke-dasharray: 2 6; stroke: var(--line-strong); }
+.about-home__axes path { stroke: var(--line); stroke-width: 1; }
+.about-home__r { fill: none; stroke: var(--ink); stroke-width: 14; stroke-linecap: round; stroke-linejoin: round; }
+.about-home__dot { fill: var(--accent); }
+.about-home__pulse { fill: none; stroke: var(--accent); stroke-width: 1.5; transform-origin: 302px 128px; animation: about-pulse 3.2s var(--ease) infinite; }
+@keyframes about-pulse { 0% { transform: scale(1); opacity: .7; } 100% { transform: scale(3.2); opacity: 0; } }
+.about-home__label { position: absolute; font-family: var(--mono); font-size: var(--fs-xs); letter-spacing: .1em; text-transform: uppercase; color: var(--text-3); background: var(--paper); padding: .2rem .5rem; border-radius: 4px; }
+.about-home__label--tl { top: 1.1rem; left: 1.1rem; }
+.about-home__label--br { right: 1.1rem; bottom: 1.1rem; color: var(--text); }
+.about-home__label--br::before { content: ""; display: inline-block; width: 6px; height: 6px; margin-right: .5rem; border-radius: 50%; background: var(--accent); vertical-align: middle; transform: translateY(-1px); }
+
+/* Contact */
+.contact-home__grid { display: grid; gap: clamp(2rem, 1rem + 3vw, 4rem); align-items: start; }
+@media (min-width: 960px) { .contact-home__grid { grid-template-columns: .8fr 1.2fr; } }
+.contact-home__grid > * { min-width: 0; }

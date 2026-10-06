@@ -1,0 +1,51 @@
+<form class="contact-form" action="{{site.formAction}}" method="post" novalidate data-contact-form data-ajax="{{site.formAjax}}" data-fallback="{{site.emailDev}}">
+  <div class="cf-grid">
+    <div class="cf-field">
+      <label for="cf-name">Full Name <span class="cf-req" aria-hidden="true">*</span></label>
+      <input id="cf-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+    </div>
+    <div class="cf-field">
+      <label for="cf-company">Company <span class="cf-opt">Optional</span></label>
+      <input id="cf-company" name="company" type="text" autocomplete="organization" maxlength="120">
+    </div>
+    <div class="cf-field">
+      <label for="cf-email">Work Email <span class="cf-req" aria-hidden="true">*</span></label>
+      <input id="cf-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="160" required>
+    </div>
+    <div class="cf-field">
+      <label for="cf-phone">Phone <span class="cf-opt">Optional</span></label>
+      <input id="cf-phone" name="phone" type="tel" autocomplete="tel" maxlength="40">
+    </div>
+    <div class="cf-field cf-field--full">
+      <label for="cf-service">What can we help with? <span class="cf-req" aria-hidden="true">*</span></label>
+      <div class="cf-select">
+        <select id="cf-service" name="service" required>
+          <option value="" selected disabled>Select an inquiry type</option>
+<!-- @each inquiryTypes components/inquiry-option.html -->
+        </select>
+        <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+      </div>
+    </div>
+    <div class="cf-field cf-field--full">
+      <label for="cf-message">Project / Requirement Details <span class="cf-req" aria-hidden="true">*</span></label>
+      <textarea id="cf-message" name="message" rows="5" minlength="20" maxlength="5000" required placeholder="Briefly describe your goals, current challenges, and any timeline."></textarea>
+    </div>
+  </div>
+  <div class="cf-hp" aria-hidden="true">
+    <label for="cf-website">Website</label>
+    <input id="cf-website" name="_honey" type="text" tabindex="-1" autocomplete="off">
+  </div>
+  <input type="hidden" name="_subject" value="New inquiry from raedtechnologies.com" data-cf-subject>
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="{{site.url}}/contact/?sent=1">
+  <div class="cf-foot">
+    <button class="btn btn--primary cf-submit" type="submit" data-cf-submit>
+      <span class="cf-submit__label">Send Inquiry</span>
+      <svg class="icon" aria-hidden="true"><use href="#i-send"/></svg>
+      <span class="cf-spinner" aria-hidden="true"></span>
+    </button>
+    <p class="cf-privacy">Required fields are marked <span aria-hidden="true">*</span>. Your details are used only to respond to your inquiry.</p>
+  </div>
+  <div class="cf-status" role="status" aria-live="polite" data-cf-status></div>
+</form>

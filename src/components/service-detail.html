@@ -1,0 +1,22 @@
+<article class="svc-item" id="{{id}}" data-svc-item data-title="{{title}}" data-index="{{index}}" aria-labelledby="{{id}}-title">
+  <div class="svc-item__body" data-reveal>
+    <div class="svc-item__meta">
+      <span class="svc-item__num">{{index}}</span>
+      <span class="svc-item__rule" aria-hidden="true"></span>
+    </div>
+    <h2 class="svc-item__title" id="{{id}}-title">{{title}}</h2>
+    <p class="svc-item__short">{{short}}</p>
+    <p class="svc-item__long">{{long}}</p>
+    <h3 class="svc-item__label">Key capabilities</h3>
+    <ul class="check-list svc-item__caps">{{list:caps}}</ul>
+    <a class="link-arrow svc-item__cta" href="/contact/">Discuss your project<span class="sr-only"> — {{title}}</span> <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+  </div>
+  <div class="svc-visual" aria-hidden="true" data-reveal>
+    <svg class="svc-visual__rings" viewBox="0 0 200 200"><circle cx="100" cy="100" r="38"/><circle cx="100" cy="100" r="62"/><circle cx="100" cy="100" r="88"/><path d="M100 0v200M0 100h200"/></svg>
+    <span class="svc-visual__node svc-visual__node--a"></span>
+    <span class="svc-visual__node svc-visual__node--b"></span>
+    <span class="svc-visual__node svc-visual__node--c"></span>
+    <span class="svc-visual__icon"><svg class="icon"><use href="#i-{{icon}}"/></svg></span>
+    <span class="svc-visual__tag">{{index}} / {{id}}</span>
+  </div>
+</article>

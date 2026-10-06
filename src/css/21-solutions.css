@@ -1,0 +1,38 @@
+/* Solutions page: problem -> approach blocks + "not sure where to start" */
+.page-solutions .sol { padding-top: clamp(1.5rem, .5rem + 3vw, 3.5rem); }
+.sol-block { display: grid; gap: clamp(1.75rem, 1rem + 2.5vw, 3rem); padding-block: clamp(3rem, 2rem + 3vw, 5rem); border-top: 1px solid var(--line); scroll-margin-top: 0; }
+.sol-block:first-child { border-top: 0; }
+.sol-block > * { min-width: 0; }
+.sol-block__meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+.sol-block__num { font-family: var(--mono); font-size: var(--fs-xs); letter-spacing: .08em; color: var(--text-3); }
+.sol-block__title { font-size: clamp(1.75rem, 1.35rem + 1.5vw, 2.5rem); letter-spacing: -.03em; }
+.sol-block__short { margin-top: 1rem; font-size: var(--fs-lg); line-height: 1.5; color: var(--text-2); max-width: 44ch; }
+
+.sol-flow { display: grid; gap: .75rem; }
+.sol-flow__card { width: 100%; padding: clamp(1.4rem, 1.1rem + 1vw, 1.9rem); border: 1px solid var(--line); border-radius: var(--radius-lg); }
+.sol-flow__card p { font-size: var(--fs-sm); line-height: 1.65; }
+.sol-flow__card--problem { background: var(--paper-2); }
+.sol-flow__card--problem p { color: var(--text); font-size: var(--fs-base); line-height: 1.5; }
+.sol-flow__card--answer { background: var(--paper); box-shadow: var(--shadow); border-color: var(--accent-line); position: relative; }
+.sol-flow__card--answer::before { content: ""; position: absolute; left: clamp(1.4rem, 1.1rem + 1vw, 1.9rem); top: -1px; width: 32px; height: 2px; background: var(--accent); }
+.sol-flow__card--answer p { color: var(--text-2); }
+.sol-flow__label { display: flex; align-items: center; gap: .5rem; margin-bottom: .85rem; font-family: var(--mono); font-size: var(--fs-xs); font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--text-3); line-height: 1.4; }
+.sol-flow__card--answer .sol-flow__label { color: var(--accent-ink); }
+.sol-flow__link { justify-self: center; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); background: var(--paper); color: var(--accent-ink); transform: rotate(90deg); }
+.sol-flow__link .icon { width: 16px; height: 16px; }
+
+.sol-start h2 { max-width: 14ch; }
+.sol-start__actions { margin-top: 2rem; }
+@media (max-width: 480px) {
+  .sol-start__actions { flex-direction: column; }
+  .sol-start__actions .btn { width: 100%; }
+}
+
+@media (min-width: 760px) {
+  .sol-flow { grid-template-columns: minmax(0, .85fr) auto minmax(0, 1.15fr); align-items: stretch; gap: .75rem; }
+  .sol-flow__link { align-self: center; transform: none; }
+}
+@media (min-width: 1100px) {
+  .sol-block { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(3rem, 5vw, 5.5rem); align-items: center; }
+  .sol-block__title { max-width: 14ch; }
+}

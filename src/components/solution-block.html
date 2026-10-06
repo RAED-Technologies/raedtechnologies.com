@@ -1,0 +1,21 @@
+<article class="sol-block" id="{{id}}" aria-labelledby="{{id}}-title">
+  <header class="sol-block__head" data-reveal>
+    <div class="sol-block__meta">
+      <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-{{icon}}"/></svg></span>
+      <span class="sol-block__num">{{index}} / 06</span>
+    </div>
+    <h2 class="sol-block__title" id="{{id}}-title">{{title}}</h2>
+    <p class="sol-block__short">{{short}}</p>
+  </header>
+  <div class="sol-flow" data-reveal>
+    <div class="sol-flow__card sol-flow__card--problem">
+      <h3 class="sol-flow__label">The challenge</h3>
+      <p>{{challenge}}</p>
+    </div>
+    <span class="sol-flow__link" aria-hidden="true"><svg class="icon"><use href="#i-arrow-right"/></svg></span>
+    <div class="sol-flow__card sol-flow__card--answer">
+      <h3 class="sol-flow__label">How we approach it</h3>
+      <p>{{long}}</p>
+    </div>
+  </div>
+</article>

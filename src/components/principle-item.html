@@ -1,0 +1,13 @@
+<li class="eng-item">
+  <h3 class="eng-item__head">
+    <button class="eng-item__btn" type="button" id="eng-btn-{{index}}" aria-controls="eng-text-{{index}}" aria-expanded="true">
+      <span class="eng-item__num">{{index}}</span>
+      <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-{{icon}}"/></svg></span>
+      <span class="eng-item__title">{{title}}</span>
+      <svg class="icon eng-item__chev" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+    </button>
+  </h3>
+  <div class="eng-item__body" id="eng-text-{{index}}" role="region" aria-labelledby="eng-btn-{{index}}">
+    <p>{{text}}</p>
+  </div>
+</li>

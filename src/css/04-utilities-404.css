@@ -1,0 +1,8 @@
+/* 404 page */
+.nf-hero { min-height: min(86svh, 760px); display: flex; align-items: center; border-bottom: 1px solid var(--line-dark); }
+.nf-inner { position: relative; }
+.nf-hero h1 { max-width: 14ch; }
+.nf-hero .lead { max-width: 48ch; }
+.nf-actions { margin-top: 2.5rem; }
+.nf-num { position: absolute; right: var(--gutter); top: 50%; transform: translateY(-50%); font-weight: 600; font-size: clamp(6rem, 3rem + 14vw, 17rem); line-height: 1; letter-spacing: -.04em; color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,.12); pointer-events: none; user-select: none; }
+@media (max-width: 860px) { .nf-num { display: none; } }

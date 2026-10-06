@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+{{headMeta}}
+  <meta name="theme-color" content="#0B0D12">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RAED Technologies">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:image" content="{{site.url}}/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{site.url}}/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/site.css?v={{version}}">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"RAED Technologies","url":"{{site.url}}","email":"{{site.emailInfo}}","telephone":"{{site.phone}}","logo":"{{site.url}}/logo.png","address":{"@type":"PostalAddress","addressLocality":"{{site.city}}","addressCountry":"{{site.countryCode}}"}}</script>
+</head>
+<body class="page-{{nav}}">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- @include partials/icons.svg -->
+  <!-- @include partials/header.html -->
+  <main id="main">
+{{content}}
+  </main>
+  <!-- @include partials/footer.html -->
+  <script src="/assets/site.js?v={{version}}" defer></script>
+</body>
+</html>
