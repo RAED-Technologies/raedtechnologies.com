@@ -4,7 +4,7 @@ Static site, no dependencies. Node 20+.
 
 - `npm run build` → builds `dist/`
 - `npm run serve` → build + preview at http://localhost:8080
-- Push to `main` → GitHub Actions builds and deploys to GitHub Pages (raedtechnologies.com).
+- `npm run deploy` → builds and force-pushes `dist/` to the `gh-pages` branch, served by GitHub Pages at raedtechnologies.com.
 
 Structure: `src/pages` (one file per page), `src/sections`, `src/partials`, `src/components`, `src/data/site.json` (all shared content), `src/css` + `src/js` (bundled in filename order), `src/public` (copied as-is). See `CONTRACT.md` for template syntax and conventions.
 

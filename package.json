@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "node build.mjs",
+    "deploy": "./deploy.sh",
     "serve": "node build.mjs && python3 -m http.server 8080 -d dist"
   }
 }
