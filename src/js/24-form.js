@@ -81,7 +81,7 @@
     panel.setAttribute('role', 'status');
     panel.tabIndex = -1;
     panel.innerHTML = '<span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>' +
-      '<h3>Thank you — your inquiry has been sent.</h3>' +
+      '<h3>Thank you — we’ve received your inquiry.</h3>' +
       '<p>Our team will review your details and get back to you within 1–2 business days.</p>';
     form.replaceWith(panel);
     panel.focus({ preventScroll: true });
