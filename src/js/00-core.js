@@ -53,6 +53,14 @@ RAED.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
     const io = new IntersectionObserver((entries) => entries.forEach((en) => {
       if (en.isIntersecting) { en.target.classList.add('is-visible'); io.unobserve(en.target); }
     }), { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-    items.forEach((el) => io.observe(el));
+    // Content already on screen at load appears at once (no fade-in "jump" between pages); the rest reveals on scroll.
+    const vh = window.innerHeight;
+    items.forEach((el) => {
+      if (el.getBoundingClientRect().top < vh * 0.92) {
+        el.style.transition = 'none';
+        el.classList.add('is-visible');
+        requestAnimationFrame(() => requestAnimationFrame(() => { el.style.transition = ''; }));
+      } else io.observe(el);
+    });
   }
 })();

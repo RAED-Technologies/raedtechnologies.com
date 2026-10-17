@@ -48,6 +48,14 @@
     @keyframes splash-failsafe{to{opacity:0;visibility:hidden}}
     @media (prefers-reduced-motion:reduce){.splash *,.splash *::after{animation:none!important;opacity:1!important;transform:none!important;stroke-dashoffset:0!important}.splash{transition:opacity .2s}}
   </style>
+  <style id="nav-css">
+    html{background:#0B0D12}
+    @view-transition{navigation:auto}
+    ::view-transition-old(root),::view-transition-new(root){animation-duration:.22s;animation-timing-function:cubic-bezier(.2,.7,.2,1)}
+    .site-header{view-transition-name:site-header}
+    @media (prefers-reduced-motion:reduce){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}}
+  </style>
+  <script type="speculationrules">{"prerender":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?*"}},{"not":{"selector_matches":"[target=_blank],[download]"}}]},"eagerness":"moderate"}]}</script>
   <noscript><style>.splash{display:none}</style></noscript>
   <script>try{if(sessionStorage.getItem('raed-splash'))document.documentElement.classList.add('no-splash');else sessionStorage.setItem('raed-splash','1')}catch(e){}</script>
 </head>
