@@ -82,3 +82,5 @@
 @media (min-width: 860px) { .bl-feature { grid-template-columns: 1.15fr 1fr; align-items: stretch; } }
 .bl-feature__art { display: flex; align-items: center; min-height: 0; background: var(--ink); }
 .bl-feature__art img { position: static; inset: auto; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; }
+.bl-more-wrap { display: flex; justify-content: center; margin-top: 2.25rem; }
+.bl-more-wrap[hidden] { display: none; }

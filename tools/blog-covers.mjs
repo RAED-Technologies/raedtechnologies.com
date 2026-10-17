@@ -152,16 +152,114 @@ const motifs = {
     s += `<path d="M910 270 C 910 140, 430 140, 430 270" stroke="${BLUE2}" stroke-width="3" fill="none" stroke-dasharray="10 9"/><circle cx="${r1(560 + R() * 200)}" cy="175" r="9" fill="${BLUE2}"/>`;
     return s;
   },
+  mobile(R) { // phones with scan + list screens
+    let s = '';
+    const phone = (x, y, w, h, hot) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="34" fill="#0F1218" stroke="${hot ? BLUE2 : DIM}" stroke-width="3"/><rect x="${x + w / 2 - 30}" y="${y + 14}" width="60" height="10" rx="5" fill="${DIM}"/>`;
+    s += phone(330, 110, 240, 470, false) + phone(630, 90, 250, 490, true);
+    for (let i = 0; i < 4; i++) s += `<rect x="360" y="${170 + i * 86}" width="180" height="66" rx="14" fill="#141821" stroke="${DIM}"/><path d="M380 ${195 + i * 86}h${80 + R() * 50}M380 ${217 + i * 86}h${50 + R() * 40}" stroke="${STROKE}" stroke-width="4" stroke-linecap="round"/><circle cx="515" cy="${203 + i * 86}" r="8" fill="${i === 1 ? '#6FD79B' : 'rgba(233,236,242,.35)'}"/>`;
+    s += `<path d="M680 170v-20h20M810 150h20v20M830 330v20h-20M700 350h-20v-20" stroke="${BLUE2}" stroke-width="5"/>`;
+    for (let i = 0; i < 5; i++) for (let j = 0; j < 5; j++) if (R() > .45 || (i < 2 && j < 2)) s += `<rect x="${712 + i * 20}" y="${182 + j * 20}" width="15" height="15" rx="2" fill="rgba(233,236,242,.75)"/>`;
+    s += `<path d="M675 250h160" stroke="${BLUE}" stroke-width="3"/><rect x="660" y="400" width="190" height="56" rx="16" fill="${BLUE}"/><path d="M700 428h110" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path d="M690 500h130" stroke="${DIM}" stroke-width="4" stroke-linecap="round"/>`;
+    s += `<path d="M905 190c30 20 30 60 0 80M935 165c50 35 50 115 0 150" stroke="${BLUE2}" stroke-width="3" opacity=".6"/>`;
+    return s;
+  },
+  order(R) { // order → cut → sew → wash → pack → ship
+    let s = ''; const xs = [170, 330, 490, 650, 810, 980]; const y = 390; const done = 2 + Math.floor(R() * 3);
+    s += `<path d="M${xs[0]} ${y}H${xs[5]}" stroke="${DIM}" stroke-width="4"/><path d="M${xs[0]} ${y}H${xs[done]}" stroke="${BLUE}" stroke-width="6"/>`;
+    xs.forEach((x, i) => {
+      const st = i < done ? 'done' : i === done ? 'now' : 'next';
+      s += `<circle cx="${x}" cy="${y}" r="${st === 'now' ? 30 : 22}" fill="${st === 'done' ? BLUE : st === 'now' ? '#141821' : '#0F1218'}" stroke="${st === 'next' ? DIM : BLUE2}" stroke-width="4"/>`;
+      if (st === 'done') s += `<path d="M${x - 9} ${y}l6 7 12-14" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`;
+      if (st === 'now') s += `<circle cx="${x}" cy="${y}" r="10" fill="${BLUE2}"/><circle cx="${x}" cy="${y}" r="46" stroke="${BLUE2}" stroke-width="2" fill="none" opacity=".5"/>`;
+      s += `<rect x="${x - 50}" y="${y + 60}" width="100" height="14" rx="7" fill="${st === 'next' ? 'rgba(233,236,242,.15)' : 'rgba(233,236,242,.45)'}"/>`;
+    });
+    s += `<path d="M${xs[5] - 50} ${y - 120}h80l20 26v34h-120v-38z" fill="#141821" stroke="${STROKE}" stroke-width="3" stroke-linejoin="round"/><path d="M${xs[5] - 60} ${y - 52}h120" stroke="${STROKE}" stroke-width="3"/><circle cx="${xs[5] - 30}" cy="${y - 52}" r="10" fill="#141821" stroke="${STROKE}" stroke-width="3"/><circle cx="${xs[5] + 30}" cy="${y - 52}" r="10" fill="#141821" stroke="${STROKE}" stroke-width="3"/>`;
+    s += `<rect x="${xs[0] - 50}" y="${y - 150}" width="120" height="96" rx="14" fill="#141821" stroke="${DIM}"/><path d="M${xs[0] - 30} ${y - 120}h80M${xs[0] - 30} ${y - 98}h56M${xs[0] - 30} ${y - 76}h68" stroke="${STROKE}" stroke-width="4" stroke-linecap="round"/>`;
+    return s;
+  },
+  maintenance(R) { // gear + wrench + schedule
+    let s = ''; const cx = 420, cy = 340, ro = 130, ri = 100, n = 10;
+    let d = ''; for (let i = 0; i < n * 2; i++) { const a = (i * Math.PI) / n, r = i % 2 ? ri : ro; const a2 = a + Math.PI / n * 0.5; d += `${i ? 'L' : 'M'}${r1(cx + Math.cos(a) * r)} ${r1(cy + Math.sin(a) * r)}L${r1(cx + Math.cos(a2) * r)} ${r1(cy + Math.sin(a2) * r)}`; }
+    s += `<path d="${d}Z" fill="#141821" stroke="${STROKE}" stroke-width="4" stroke-linejoin="round"/><circle cx="${cx}" cy="${cy}" r="42" fill="${INK}" stroke="${BLUE2}" stroke-width="4"/>`;
+    s += `<path d="M${cx + 70} ${cy + 70}l120 120" stroke="${BLUE}" stroke-width="22"/><circle cx="${cx + 60}" cy="${cy + 60}" r="30" fill="none" stroke="${BLUE}" stroke-width="14"/>`;
+    const gx = 720, gy = 170; s += `<rect x="${gx}" y="${gy}" width="330" height="320" rx="22" fill="#141821" stroke="${DIM}"/><path d="M${gx} ${gy + 60}h330" stroke="${DIM}" stroke-width="2"/>`;
+    const due = Math.floor(R() * 20);
+    for (let i = 0; i < 20; i++) { const x = gx + 24 + (i % 5) * 62, y = gy + 84 + Math.floor(i / 5) * 58; s += `<rect x="${x}" y="${y}" width="44" height="40" rx="8" fill="${i === due ? BLUE : i % 7 === 3 ? 'rgba(111,215,155,.35)' : 'rgba(255,255,255,.05)'}" stroke="${i === due ? BLUE2 : 'none'}"/>`; }
+    return s;
+  },
+  hr(R) { // people + calendar + payslip
+    let s = '';
+    for (let i = 0; i < 3; i++) { const x = 230 + i * 120, y = 250 + (i === 1 ? -30 : 0); s += `<circle cx="${x}" cy="${y}" r="34" fill="#141821" stroke="${i === 1 ? BLUE2 : STROKE}" stroke-width="4"/><path d="M${x - 58} ${y + 120}c0-44 26-70 58-70s58 26 58 70" fill="#141821" stroke="${i === 1 ? BLUE2 : STROKE}" stroke-width="4"/>`; }
+    const cx = 640, cy = 170; s += `<rect x="${cx}" y="${cy}" width="230" height="230" rx="22" fill="#141821" stroke="${DIM}"/><rect x="${cx}" y="${cy}" width="230" height="52" rx="22" fill="${BLUE}"/><path d="M${cx + 50} ${cy - 14}v30M${cx + 180} ${cy - 14}v30" stroke="${STROKE}" stroke-width="5" stroke-linecap="round"/>`;
+    for (let i = 0; i < 15; i++) { const x = cx + 22 + (i % 5) * 40, y = cy + 72 + Math.floor(i / 5) * 42; s += `<rect x="${x}" y="${y}" width="26" height="26" rx="6" fill="${R() > .75 ? 'rgba(111,215,155,.6)' : 'rgba(255,255,255,.08)'}"/>`; }
+    const px = 900, py = 250; s += `<rect x="${px}" y="${py}" width="190" height="250" rx="16" fill="#F4F6F9"/><path d="M${px + 24} ${py + 40}h100M${px + 24} ${py + 84}h142M${px + 24} ${py + 114}h142M${px + 24} ${py + 144}h120" stroke="#C9D1DD" stroke-width="6" stroke-linecap="round"/><path d="M${px + 24} ${py + 200}h70" stroke="${BLUE}" stroke-width="10" stroke-linecap="round"/><circle cx="${px + 150}" cy="${py + 200}" r="18" fill="#6FD79B"/><path d="M${px + 142} ${py + 200}l6 6 11-12" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/>`;
+    return s;
+  },
+  docs(R) { // document scanned into fields
+    let s = ''; const dx = 300, dy = 110;
+    s += `<rect x="${dx}" y="${dy}" width="300" height="400" rx="16" fill="#F4F6F9"/><path d="M${dx + 32} ${dy + 46}h120" stroke="#9AA3B2" stroke-width="10" stroke-linecap="round"/>`;
+    for (let i = 0; i < 7; i++) s += `<path d="M${dx + 32} ${dy + 100 + i * 36}h${140 + R() * 90}" stroke="#C9D1DD" stroke-width="7" stroke-linecap="round"/>`;
+    const sy = dy + 150 + R() * 160; s += `<rect x="${dx - 20}" y="${r1(sy)}" width="340" height="4" fill="${BLUE}"/><rect x="${dx - 20}" y="${r1(sy - 40)}" width="340" height="40" fill="url(#scan)"/>`;
+    s += `<path d="M${dx + 320} 310 C 700 310, 700 230, 760 230M${dx + 320} 310 C 700 310, 700 390, 760 390" stroke="${BLUE2}" stroke-width="3" stroke-dasharray="9 8"/>`;
+    for (const [y, ok] of [[190, true], [350, false]]) s += `<rect x="760" y="${y}" width="280" height="80" rx="16" fill="#141821" stroke="${ok ? DIM : 'rgba(242,178,92,.7)'}"/><path d="M790 ${y + 30}h120M790 ${y + 54}h80" stroke="${STROKE}" stroke-width="4" stroke-linecap="round"/><circle cx="1004" cy="${y + 40}" r="16" fill="${ok ? '#6FD79B' : '#F2B25C'}"/>`;
+    s += `<path d="M997 230l5 6 9-11" stroke="${INK}" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M1004 380v10M1004 397v2" stroke="${INK}" stroke-width="4" stroke-linecap="round"/>`;
+    return s;
+  },
+  backup(R) { // original → local copy → off-site copy
+    let s = '';
+    const db = (x, y, hot) => `<ellipse cx="${x}" cy="${y}" rx="78" ry="22" fill="#141821" stroke="${hot ? BLUE2 : STROKE}" stroke-width="4"/><path d="M${x - 78} ${y}v120c0 12 35 22 78 22s78-10 78-22V${y}" fill="#141821" stroke="${hot ? BLUE2 : STROKE}" stroke-width="4"/><path d="M${x - 78} ${y + 60}c0 12 35 22 78 22s78-10 78-22" stroke="${hot ? BLUE2 : STROKE}" stroke-width="3" fill="none"/>`;
+    s += db(270, 250, true) + db(600, 250, false);
+    s += `<path d="M860 330c-40 0-66-28-66-60 0-34 28-60 64-60 12-36 48-60 90-58 46 2 80 34 86 74 38 0 64 26 64 56 0 30-26 48-62 48z" fill="#141821" stroke="${STROKE}" stroke-width="4" stroke-linejoin="round"/>`;
+    s += `<path d="M360 310H510" stroke="${BLUE}" stroke-width="5"/><path d="M500 298l14 12-14 12" stroke="${BLUE}" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`;
+    s += `<path d="M690 310H790" stroke="${BLUE}" stroke-width="5" stroke-dasharray="12 9"/><path d="M780 298l14 12-14 12" stroke="${BLUE}" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`;
+    const ok = Math.floor(R() * 3);
+    [[270, 'Original'], [600, 'Second copy'], [960, 'Off-site']].forEach(([x], k) => { s += `<rect x="${x - 70}" y="430" width="140" height="14" rx="7" fill="rgba(233,236,242,.35)"/><circle cx="${x}" cy="480" r="16" fill="${k === ok ? BLUE : '#6FD79B'}"/><path d="M${x - 7} 480l5 6 10-11" stroke="${INK}" stroke-width="4" fill="none" stroke-linecap="round"/>`; });
+    return s;
+  },
+  roi(R) { // balance scale
+    let s = ''; const cx = 600, top = 160; const tilt = 6 + R() * 6;
+    s += `<path d="M${cx} ${top}v330M${cx - 110} 500h220" stroke="${STROKE}" stroke-width="6" stroke-linecap="round"/><circle cx="${cx}" cy="${top}" r="14" fill="${BLUE}"/>`;
+    s += `<g transform="rotate(${-tilt} ${cx} ${top + 20})"><path d="M${cx - 260} ${top + 20}H${cx + 260}" stroke="${STROKE}" stroke-width="6" stroke-linecap="round"/>`;
+    for (const side of [-1, 1]) { const x = cx + side * 240; s += `<path d="M${x} ${top + 20}l-70 140M${x} ${top + 20}l70 140" stroke="${DIM}" stroke-width="3"/><path d="M${x - 90} ${top + 160}h180c0 40-40 60-90 60s-90-20-90-60z" fill="#141821" stroke="${side === 1 ? BLUE2 : STROKE}" stroke-width="4"/>`; }
+    s += `<rect x="${cx - 285}" y="${top + 110}" width="90" height="46" rx="10" fill="rgba(233,236,242,.18)" stroke="${STROKE}" stroke-width="3"/>`;
+    for (let i = 0; i < 3; i++) s += `<rect x="${cx + 200 + i * 2}" y="${top + 120 - i * 28}" width="${84 - i * 6}" height="24" rx="6" fill="${BLUE}" stroke="${BLUE2}" stroke-width="2"/>`;
+    s += `</g>`;
+    return s;
+  },
+  legacy(R) { // old CRT → modern screen
+    let s = '';
+    s += `<rect x="170" y="190" width="300" height="240" rx="26" fill="#141821" stroke="${DIM}" stroke-width="4"/><rect x="200" y="220" width="240" height="170" rx="14" fill="#0F1218" stroke="${DIM}"/>`;
+    for (let i = 0; i < 6; i++) s += `<path d="M220 ${244 + i * 24}h${60 + R() * 120}" stroke="rgba(111,215,155,.45)" stroke-width="5" stroke-linecap="round"/>`;
+    s += `<path d="M280 430l-20 50h120l-20-50" fill="#141821" stroke="${DIM}" stroke-width="4"/>`;
+    s += `<path d="M520 320h130" stroke="${BLUE}" stroke-width="6" stroke-linecap="round" stroke-dasharray="14 10"/><path d="M640 300l26 20-26 20" stroke="${BLUE}" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`;
+    s += `<rect x="700" y="160" width="380" height="250" rx="20" fill="#141821" stroke="${BLUE2}" stroke-width="3"/><rect x="720" y="182" width="90" height="206" rx="10" fill="rgba(255,255,255,.04)"/>`;
+    for (let i = 0; i < 4; i++) s += `<path d="M734 ${210 + i * 34}h60" stroke="${i === 1 ? BLUE2 : DIM}" stroke-width="5" stroke-linecap="round"/>`;
+    s += `<rect x="826" y="182" width="232" height="96" rx="12" fill="rgba(47,107,255,.18)"/><path d="M846 250 L880 226 L912 238 L950 206 L990 220 L1030 196" stroke="${BLUE}" stroke-width="4" fill="none"/><rect x="826" y="294" width="110" height="94" rx="12" fill="rgba(255,255,255,.05)"/><rect x="948" y="294" width="110" height="94" rx="12" fill="rgba(255,255,255,.05)"/>`;
+    s += `<path d="M860 410v40M780 460h200" stroke="${STROKE}" stroke-width="5" stroke-linecap="round"/>`;
+    return s;
+  },
+};
+
+// Topic-specific art for posts whose category already has several covers
+const COVER = {
+  'mobile-apps-field-floor-teams': 'mobile',
+  'digital-order-tracking-merchandisers': 'order',
+  'preventive-maintenance-without-paperwork': 'maintenance',
+  'attendance-leave-payroll-automation': 'hr',
+  'ai-document-processing-human-review': 'docs',
+  'backups-disaster-recovery-mid-size-business': 'backup',
+  'measuring-software-roi-honestly': 'roi',
+  'modernising-legacy-software': 'legacy',
 };
 
 for (const p of posts) {
   const R = rng(p.slug);
   const gx = r1(W * (0.25 + R() * 0.5)), gy = r1(H * (0.25 + R() * 0.4));
-  const motif = (motifs[p.category] || motifs.Strategy)(R);
+  const motif = (motifs[COVER[p.slug]] || motifs[p.category] || motifs.Strategy)(R);
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${p.title.replace(/"/g, '&quot;')}">
 <defs><radialGradient id="g" cx="${gx}" cy="${gy}" r="560" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="${BLUE}" stop-opacity=".42"/><stop offset="1" stop-color="${BLUE}" stop-opacity="0"/></radialGradient>
 <pattern id="p" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="${LINE}" stroke-width="1"/></pattern>
-<linearGradient id="v" x1="0" y1="0" x2="0" y2="1"><stop offset=".55" stop-color="${INK}" stop-opacity="0"/><stop offset="1" stop-color="${INK}" stop-opacity=".85"/></linearGradient></defs>
+<linearGradient id="scan" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${BLUE}" stop-opacity="0"/><stop offset="1" stop-color="${BLUE}" stop-opacity=".35"/></linearGradient><linearGradient id="v" x1="0" y1="0" x2="0" y2="1"><stop offset=".55" stop-color="${INK}" stop-opacity="0"/><stop offset="1" stop-color="${INK}" stop-opacity=".85"/></linearGradient></defs>
 <rect width="${W}" height="${H}" fill="${INK}"/><rect width="${W}" height="${H}" fill="url(#p)"/><rect width="${W}" height="${H}" fill="url(#g)"/>
 <g fill="none" stroke-linecap="round">${motif}</g>
 <rect width="${W}" height="${H}" fill="url(#v)"/>

@@ -138,5 +138,85 @@
     "readTime": "4 min read",
     "date": "2026-10-17",
     "featured": false
+  },
+  {
+    "slug": "mobile-apps-field-floor-teams",
+    "title": "Mobile apps for field and floor teams: what to build, how to work offline, which devices",
+    "category": "Operations",
+    "excerpt": "Order taking, quality checks, goods receipt and proof of delivery: how to choose the first job, design for real conditions, work offline and pick devices.",
+    "description": "What mobile apps to build for field, warehouse and factory teams, why offline working matters, and how to choose devices that survive the job.",
+    "readTime": "6 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "digital-order-tracking-merchandisers",
+    "title": "From order to shipment: digital order tracking merchandisers can rely on",
+    "category": "Manufacturing",
+    "excerpt": "Personal trackers break as orders grow. Build tracking on T&A calendars, take actual dates from the work itself and flag delays while there is time to act.",
+    "description": "Digital order tracking for merchandisers: T&A milestones, actual dates from the floor, early delay alerts and views for every role.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "preventive-maintenance-without-paperwork",
+    "title": "Preventive maintenance without paperwork: keeping machines running, not chasing logbooks",
+    "category": "Manufacturing",
+    "excerpt": "QR-labelled assets, planned work orders, breakdowns reported from the floor and spares linked to jobs: a phased path from logbook to routine.",
+    "description": "How to run preventive maintenance digitally: asset register, maintenance plans, work orders, breakdown reporting, spares and simple measures.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "attendance-leave-payroll-automation",
+    "title": "Attendance, leave and payroll: automating HR paperwork the right way",
+    "category": "Automation",
+    "excerpt": "From punch data to payslip: what to automate, the Labour Act points your rules must reflect after the 2026 amendment, and how to switch over safely.",
+    "description": "Automating attendance, leave and payroll in Bangladesh: legal baseline after the 2026 amendment, step-by-step automation and a safe switch-over.",
+    "readTime": "6 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "ai-document-processing-human-review",
+    "title": "AI for documents: reading invoices, POs and delivery notes with a human in the loop",
+    "category": "AI",
+    "excerpt": "AI can read invoices, purchase orders and challans well, but not perfectly. How to combine extraction, validation rules and fast human review.",
+    "description": "Using AI to read invoices, purchase orders and delivery notes: extraction, validation rules, human review, honest measurement and data protection.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "backups-disaster-recovery-mid-size-business",
+    "title": "Backups and disaster recovery: what a mid-size business actually needs",
+    "category": "Security",
+    "excerpt": "Set recovery targets with the business, follow the 3-2-1 rule with one isolated copy, write a short recovery plan and test restores regularly.",
+    "description": "Backups and disaster recovery for mid-size businesses: RPO and RTO, the 3-2-1 rule, ransomware-safe copies, a recovery plan and restore tests.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "measuring-software-roi-honestly",
+    "title": "Measuring the return on software without inventing numbers",
+    "category": "Strategy",
+    "excerpt": "Borrowed figures and missing baselines make most ROI tables fiction. Five steps to a business case you can measure before and check after go-live.",
+    "description": "How to measure software ROI honestly: measurable problems, a real baseline, full costs, conservative benefits and review points after go-live.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "modernising-legacy-software",
+    "title": "Old system, new demands: rebuild, refactor or replace your legacy software?",
+    "category": "Delivery",
+    "excerpt": "When ageing software becomes a liability, a module-by-module framework for choosing to refactor, rebuild or replace, and how to change in stages.",
+    "description": "A practical framework for modernising legacy software: when to refactor, rebuild or replace, unsupported platforms and staged, low-risk change.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
   }
 ]

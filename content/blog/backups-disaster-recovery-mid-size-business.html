@@ -1,0 +1,111 @@
+<p>Most businesses believe they have backups. Fewer know exactly what is backed up, where the copies are, how old the latest one is, or how long it would take to get the business running again from them. That gap is usually discovered on the worst possible day: a server disk fails, ransomware encrypts the shared drive, a fire or flood damages the office, or someone deletes a year of records by mistake.</p>
+
+<p>A sensible backup and disaster recovery plan for a mid-size business does not need to be elaborate. It needs to be deliberate, written down and tested. This article sets out what that looks like in practice.</p>
+
+<h2>Two questions that shape everything</h2>
+
+<p>Before choosing tools, decide two things for each important system. The US National Institute of Standards and Technology (NIST) uses these terms in its contingency planning guidance:</p>
+
+<ul>
+  <li><strong>Recovery point objective (RPO):</strong> the point in time to which data must be recovered after an outage. In plain terms, how much recent work you can afford to lose.</li>
+  <li><strong>Recovery time objective (RTO):</strong> how long a system can be in recovery before the business is seriously affected. In plain terms, how long you can manage without it.</li>
+</ul>
+
+<p>These are business decisions, not IT decisions. For example, a business might decide that its accounting system can lose no more than a few hours of entries and must be back within one working day, while an archive of old drawings can lose a week and wait several days. The answers decide how often you back up and how quickly you need to restore.</p>
+
+<h3>A simple way to set them</h3>
+
+<ol>
+  <li>List your systems and important data: accounting, payroll, ERP or production, email, file shares, design files, websites.</li>
+  <li>For each, ask the people who use it: "If this disappeared at 3pm today, how far back could we go, and how long could we manage?"</li>
+  <li>Record the answers, agree them with management, and rank systems by priority.</li>
+</ol>
+
+<h2>The 3-2-1 rule</h2>
+
+<p>A widely used starting point, described in guidance published by the US Cybersecurity and Infrastructure Security Agency (CISA), is the 3-2-1 rule:</p>
+
+<ul>
+  <li><strong>3</strong> copies of any important file: one primary and two backups.</li>
+  <li><strong>2</strong> different media types, to protect against different kinds of failure.</li>
+  <li><strong>1</strong> copy stored offsite, outside your business premises.</li>
+</ul>
+
+<p>Ransomware has added an important refinement. Attackers often look for backups on the network and encrypt or delete them too. At least one copy should therefore be <em>isolated</em>: offline, or in a separate account with different credentials and protection against deletion, so that an attacker with access to your main systems cannot reach it.</p>
+
+<blockquote>
+  <p>A backup you have never restored is a hope, not a plan. The test restore is the part that matters.</p>
+</blockquote>
+
+<h2>What a practical setup looks like</h2>
+
+<h3>Servers and business systems</h3>
+
+<ul>
+  <li>Automatic, scheduled backups of databases and application data, at a frequency that meets each system's RPO.</li>
+  <li>A local copy for quick restores of everyday mistakes, such as a deleted file.</li>
+  <li>An offsite or cloud copy protected against deletion and accessible only with separate credentials.</li>
+  <li>Configuration and installation details documented, so a system can be rebuilt on new hardware, not just its data restored.</li>
+</ul>
+
+<h3>Cloud services</h3>
+
+<p>Moving email and documents to a cloud service does not automatically mean they are backed up in the way you need. Check what the provider keeps, for how long, and whether deleted or overwritten data can be recovered after that period. For critical data, consider an independent backup.</p>
+
+<h3>Laptops and desktops</h3>
+
+<p>Important work should be stored in managed shared locations or synchronised cloud folders, not only on a personal device. A broken laptop should cost a day of inconvenience, not the only copy of the costing files.</p>
+
+<h2>Disaster recovery is more than backups</h2>
+
+<p>Backups give you the data. Disaster recovery is the plan for getting the business working again. Write a short document that answers:</p>
+
+<ul>
+  <li><strong>Who decides</strong> that a disaster has happened and recovery begins?</li>
+  <li><strong>What is restored first,</strong> following your agreed priorities?</li>
+  <li><strong>Where it runs</strong> if the original server or office is unavailable: spare hardware, a cloud environment, or a second site.</li>
+  <li><strong>How people work in the meantime,</strong> for example manual order taking or offline production records, and how that data is entered afterwards.</li>
+  <li><strong>Who to contact:</strong> internal staff, IT providers, software vendors, internet providers, insurers.</li>
+  <li><strong>Where the plan is kept,</strong> including a copy that does not depend on the systems it is meant to recover.</li>
+</ul>
+
+<h2>Testing: the step most often skipped</h2>
+
+<ol>
+  <li><strong>Monthly:</strong> restore a few files and one database to a test location and check they open correctly.</li>
+  <li><strong>Every six months:</strong> restore a complete priority system and time it against the RTO.</li>
+  <li><strong>Once a year:</strong> walk through the disaster recovery plan with the people involved, using a realistic scenario.</li>
+</ol>
+
+<p>Record each test: what was restored, how long it took, and what went wrong. Problems found in a test are cheap. Problems found during a real incident are not.</p>
+
+<h2>Common gaps</h2>
+
+<ul>
+  <li>Backups that silently stopped running months ago, with nobody checking the reports.</li>
+  <li>All copies on the same network, reachable with the same administrator password.</li>
+  <li>Backups of data, but no record of how to rebuild the application around it.</li>
+  <li>A plan that only one person understands.</li>
+  <li>Backup media stored in the same room as the server.</li>
+</ul>
+
+<h2>Questions to ask your IT team or provider</h2>
+
+<ul>
+  <li>For each critical system, what are our RPO and RTO, and can we currently meet them?</li>
+  <li>Where are our backup copies, and could ransomware on our network reach all of them?</li>
+  <li>When did we last restore a full system, and how long did it take?</li>
+  <li>Who is alerted if a backup fails, and what do they do?</li>
+  <li>If our office were unusable tomorrow, where would our systems run?</li>
+</ul>
+
+<h2>Where RAED fits</h2>
+
+<p>We design backup and recovery into the systems we build and host, and we can review your current arrangements against the recovery targets your business actually needs. Where gaps exist, we help close them in order of priority.</p>
+
+<h2>Sources</h2>
+
+<ul>
+  <li>NIST Computer Security Resource Center glossary, "Recovery Point Objective" and "Recovery Time Objective", citing NIST SP 800-34 Rev. 1. <a href="https://csrc.nist.gov/glossary/term/recovery_point_objective">csrc.nist.gov</a> and <a href="https://csrc.nist.gov/glossary/term/RTO">csrc.nist.gov</a></li>
+  <li>CISA (US-CERT), "Data Backup Options", Paul Ruggiero and Matthew A. Heckathorn, 2012. <a href="https://www.cisa.gov/sites/default/files/publications/data_backup_options.pdf">cisa.gov</a></li>
+</ul>

@@ -1,0 +1,112 @@
+<p>Many established businesses run on software that has served them well for years: an accounts package customised long ago, a production system written by a developer who has since moved on, an Access database that grew into the heart of the commercial department. It still works, mostly. But it is getting harder to change, harder to support and harder to connect to anything new.</p>
+
+<p>At some point, the question comes up: should we rebuild it, improve what we have, or replace it with something else? The answer is rarely obvious, and the cost of getting it wrong is high in both directions. This article offers a practical way to decide.</p>
+
+<h2>Signs your software has become a liability</h2>
+
+<ul>
+  <li><strong>One person dependency.</strong> Only one developer or one staff member understands how it works.</li>
+  <li><strong>Changes are slow and risky.</strong> Small requests take weeks, and fixing one thing often breaks another.</li>
+  <li><strong>Unsupported foundations.</strong> It runs on operating systems, databases or frameworks that no longer receive security updates.</li>
+  <li><strong>Workarounds everywhere.</strong> Staff export data to Excel to do what the system cannot.</li>
+  <li><strong>No integration.</strong> It cannot easily share data with your accounts, buyer portals, mobile apps or newer systems.</li>
+  <li><strong>Hard to access.</strong> It only works on certain office computers, not from a browser or phone.</li>
+</ul>
+
+<p>Unsupported foundations deserve particular attention. For example, Microsoft's published lifecycle pages show that Windows 10 Home and Pro reached end of support on 14 October 2025, and that extended support for SQL Server 2014 ended on 9 July 2024, with paid extended security updates available for a limited period after that. Software that depends on platforms like these carries a growing security risk, whatever its features.</p>
+
+<h2>The three main options</h2>
+
+<h3>Refactor: improve what you have</h3>
+
+<p>Keep the existing system, but clean up its code, move it to supported platforms, add documentation and tests, and improve specific parts. Sometimes this includes "rehosting": moving the same application to a newer server or the cloud.</p>
+
+<p><strong>Suits:</strong> systems whose business logic is sound and well matched to how you work, but whose technical foundation is ageing.</p>
+
+<p><strong>Watch for:</strong> code so tangled that every improvement costs more than expected.</p>
+
+<h3>Rebuild: write it again</h3>
+
+<p>Build a new system that does what the old one did, and more, using modern technology. The old system's behaviour becomes the starting specification.</p>
+
+<p><strong>Suits:</strong> systems that are central to how you compete, where off-the-shelf products do not fit, and where the current code is beyond economical repair.</p>
+
+<p><strong>Watch for:</strong> the temptation to rebuild everything at once, and the hidden rules buried in old code that nobody remembers until they are missing.</p>
+
+<h3>Replace: move to a product</h3>
+
+<p>Adopt an existing package or cloud service, configured to your needs, and migrate your data into it.</p>
+
+<p><strong>Suits:</strong> standard functions such as accounting, payroll or email, where your process is not a source of advantage and good products exist.</p>
+
+<p><strong>Watch for:</strong> products that require you to change working practices you depend on, and customisation that recreates the old problem in a new system.</p>
+
+<blockquote>
+  <p>The safest modernisation is rarely a single switch-over weekend. It is a series of smaller moves, each of which leaves the business working.</p>
+</blockquote>
+
+<h2>A decision framework</h2>
+
+<p>Assess each major part of the system, not just the system as a whole, against five questions:</p>
+
+<ol>
+  <li><strong>Business value.</strong> Does this part support something distinctive about how you work, or is it a standard function?</li>
+  <li><strong>Fit.</strong> Does it still match how the business operates today?</li>
+  <li><strong>Technical health.</strong> Is it on supported platforms, documented and reasonably maintainable?</li>
+  <li><strong>Change pressure.</strong> How often do you need to change it, and how painful is that?</li>
+  <li><strong>Integration needs.</strong> Does it need to exchange data with other systems, partners or mobile users?</li>
+</ol>
+
+<p>A rough guide follows from the answers:</p>
+
+<ul>
+  <li><strong>Standard function, good products available:</strong> replace.</li>
+  <li><strong>Distinctive, good fit, poor technical health:</strong> refactor, or rebuild in stages if the code is beyond repair.</li>
+  <li><strong>Distinctive, poor fit, frequent change:</strong> rebuild in stages.</li>
+  <li><strong>Low value, rarely used:</strong> consider retiring it altogether.</li>
+</ul>
+
+<p>Most businesses end up with a mix: replace the accounts package, rebuild the production and order modules in stages, and retire a handful of reports nobody uses.</p>
+
+<h2>Reduce risk with staged change</h2>
+
+<p>Rather than replacing everything at once, modernise one area at a time while the old system keeps running. A common approach is to put a modern layer, such as an API, in front of the old system, then move functions behind it one by one. Users see gradual improvements; the business is never without a working system.</p>
+
+<h3>Before you change anything</h3>
+
+<ul>
+  <li><strong>Document what the system actually does,</strong> including calculations, validations and reports, by reading the code and interviewing users.</li>
+  <li><strong>Back up and secure the old system,</strong> and make sure you can restore it.</li>
+  <li><strong>Clean and map the data.</strong> Data migration is usually the hardest part of any modernisation, not the new screens.</li>
+  <li><strong>Agree how long the old system stays available</strong> for reference, and in what form.</li>
+</ul>
+
+<h2>Common mistakes</h2>
+
+<ol>
+  <li><strong>Copying every old feature.</strong> Some exist only to work around problems the new system will not have. Ask why each one is needed.</li>
+  <li><strong>Underestimating the data.</strong> Years of inconsistent codes and duplicate records take time to resolve.</li>
+  <li><strong>Leaving users out.</strong> The people who use the system daily know the hidden rules and exceptions.</li>
+  <li><strong>Doing nothing because it still works.</strong> Unsupported software tends to fail at inconvenient moments, and recovery is harder the longer it waits.</li>
+</ol>
+
+<h2>Questions to ask before deciding</h2>
+
+<ul>
+  <li>Which parts of our system are genuinely distinctive, and which are standard?</li>
+  <li>What platforms does it depend on, and are they still supported?</li>
+  <li>Who understands it today, and what happens if they leave?</li>
+  <li>What is the cost of keeping it for another three years, including risk?</li>
+  <li>Can we modernise in stages without stopping the business?</li>
+</ul>
+
+<h2>Where RAED fits</h2>
+
+<p>We assess legacy systems module by module and recommend whether to refactor, rebuild or replace each part, then carry out the work in stages so the business keeps running. Where a product is the better answer, we will say so and help with the migration.</p>
+
+<h2>Sources</h2>
+
+<ul>
+  <li>Microsoft Learn, "Windows 10 Home and Pro - Microsoft Lifecycle". <a href="https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro">learn.microsoft.com</a></li>
+  <li>Microsoft Learn, "SQL Server 2014 - Microsoft Lifecycle". <a href="https://learn.microsoft.com/en-us/lifecycle/products/sql-server-2014">learn.microsoft.com</a></li>
+</ul>

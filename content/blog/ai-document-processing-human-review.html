@@ -1,0 +1,113 @@
+<p>In most mid-size businesses, a surprising number of skilled people spend their days copying information from one document into another. Accounts staff key supplier invoices into the accounting system. Commercial teams re-type buyer purchase orders. Store staff transfer quantities from delivery challans into the receiving register. The work is necessary, repetitive and easy to get slightly wrong.</p>
+
+<p>Reading documents is one of the areas where AI has become genuinely useful. Modern models can read scanned and photographed documents, find the fields that matter and return them in a structured form, even when every supplier uses a different layout. But they still make mistakes, sometimes confidently. This article explains how to use AI for documents in a way that saves time without letting errors slip into your books.</p>
+
+<h2>What AI document processing actually does</h2>
+
+<p>A typical setup has four steps:</p>
+
+<ol>
+  <li><strong>Capture.</strong> Documents arrive by email, scanner, phone camera or upload, and are collected in one place.</li>
+  <li><strong>Extraction.</strong> An AI model reads the document and pulls out fields such as supplier, invoice number, date, line items, quantities, prices and totals.</li>
+  <li><strong>Validation.</strong> Business rules check the extracted data against what you already know: is this a known supplier, does the purchase order exist, do the line totals add up?</li>
+  <li><strong>Review and posting.</strong> A person checks anything flagged, corrects it if needed and approves it. Only then does the data go into your accounting, ERP or inventory system.</li>
+</ol>
+
+<p>The AI does the reading. Your rules and your people do the checking. Both are essential.</p>
+
+<h2>Good first candidates</h2>
+
+<ul>
+  <li><strong>Supplier invoices.</strong> High volume, consistent fields, and a natural check against purchase orders and goods receipts.</li>
+  <li><strong>Buyer purchase orders.</strong> Long, detailed documents where re-typing errors in sizes, colours or quantities are costly.</li>
+  <li><strong>Delivery notes and challans.</strong> Useful for matching what arrived against what was ordered.</li>
+  <li><strong>Bank advices and payment confirmations.</strong> Helpful for matching receipts against customer invoices.</li>
+</ul>
+
+<p>Choose one document type with enough volume to matter and a clear downstream check. Supplier invoices are often the best place to start.</p>
+
+<blockquote>
+  <p>Let AI do the reading and let your rules do the doubting. A person should approve anything the rules cannot confirm.</p>
+</blockquote>
+
+<h2>Designing the human review</h2>
+
+<p>Human review is not a sign that the AI has failed. It is how you keep control. The aim is to make review fast and focused, so people check what needs checking and nothing else.</p>
+
+<h3>Rules that decide what a person sees</h3>
+
+<ul>
+  <li><strong>Match checks.</strong> Invoice quantities and prices compared with the purchase order and goods receipt, within agreed tolerances.</li>
+  <li><strong>Arithmetic checks.</strong> Line totals, tax and grand total recalculated and compared.</li>
+  <li><strong>Master data checks.</strong> Supplier, item codes and bank details matched to your existing records.</li>
+  <li><strong>Duplicate checks.</strong> The same supplier and invoice number, or the same amount and date, already seen.</li>
+  <li><strong>Confidence checks.</strong> Fields the model was unsure about, or that were unreadable, sent for review.</li>
+</ul>
+
+<h3>A review screen that respects people's time</h3>
+
+<ul>
+  <li>The original document and the extracted data side by side.</li>
+  <li>Flagged fields highlighted, with the reason for the flag.</li>
+  <li>Corrections made in place, and recorded.</li>
+  <li>One clear action to approve, reject or send back.</li>
+</ul>
+
+<h3>Some things always need a person</h3>
+
+<p>Changes to a supplier's bank details, unusually large amounts and first invoices from a new supplier should always be reviewed, however confident the model is. These are the same points where fraud and costly errors tend to appear.</p>
+
+<h2>Measure it honestly</h2>
+
+<p>Before you start, record how long the current process takes and how many corrections are made after posting. During the pilot, track:</p>
+
+<ul>
+  <li>How many documents pass all checks without correction.</li>
+  <li>Which fields are corrected most often, and for which suppliers or layouts.</li>
+  <li>Time from receipt to posting.</li>
+  <li>Errors found after posting, which should fall, not rise.</li>
+</ul>
+
+<p>These figures, from your own documents, tell you whether to extend the approach and where the model or the rules need adjusting. Do not rely on a vendor's general accuracy claims; accuracy varies widely with document quality, language and layout.</p>
+
+<h2>Data protection and control</h2>
+
+<p>Invoices, purchase orders and payment documents contain commercial and sometimes personal information. Before sending them to any AI service, settle:</p>
+
+<ul>
+  <li>Where documents are processed and stored, and for how long.</li>
+  <li>Whether the provider may use your documents to train its models, and how to opt out.</li>
+  <li>Who in your organisation can see which documents.</li>
+  <li>How you would export your data if you change provider.</li>
+</ul>
+
+<p>Read the provider's business terms carefully, and choose a service that offers clear commitments on these points. Parliament passed the Personal Data Protection Bill, 2026 in April 2026, and some of the detail, such as breach notification timeframes, is left to regulations, so check the current position before relying on any assumption. Build in good practice now rather than waiting for every rule to be settled.</p>
+
+<h2>Common mistakes</h2>
+
+<ol>
+  <li><strong>Posting straight to the ledger.</strong> Extraction without validation and review moves errors faster, not fewer.</li>
+  <li><strong>Starting with the hardest documents.</strong> Handwritten, poorly scanned or highly varied documents are a poor first test. Prove the routine on cleaner ones.</li>
+  <li><strong>No feedback loop.</strong> Corrections made by reviewers are valuable. Use them to improve prompts, rules and supplier-specific settings.</li>
+  <li><strong>Ignoring the source.</strong> Sometimes the best fix is asking major suppliers for electronic invoices, or connecting directly to a buyer portal, rather than reading a PDF at all.</li>
+</ol>
+
+<h2>A simple pilot plan</h2>
+
+<ol>
+  <li>Pick one document type and collect a representative sample, including the difficult ones.</li>
+  <li>Agree the fields, validation rules and who reviews what.</li>
+  <li>Run the AI process alongside the manual one for a few weeks and compare results.</li>
+  <li>Switch to review-only once error rates are understood and acceptable to the finance team.</li>
+</ol>
+
+<h2>Where RAED fits</h2>
+
+<p>We build AI-assisted document processing that sits in front of your existing accounting, ERP or inventory systems, with validation rules and review screens designed with your finance and commercial teams. People stay in charge of what gets posted.</p>
+
+<h2>Sources</h2>
+
+<ul>
+  <li>Dhaka Tribune, "Parliament passes 31 bills related to IG-era ordinances", 9 April 2026. <a href="https://www.dhakatribune.com/bangladesh/parliament/407362/24-bills-passed-in-parliament-thursday">dhakatribune.com</a></li>
+  <li>Securiti, overview of Bangladesh's Personal Data Protection Act, 2026, 29 June 2026. <a href="https://securiti.ai/?p=105435">securiti.ai</a></li>
+</ul>
