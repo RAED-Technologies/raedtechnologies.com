@@ -49,7 +49,7 @@ function writePage(meta, content, label, raw = '') {
   const headMeta = meta.robots
     ? `  <meta name="robots" content="${meta.robots}">`
     : `  <link rel="canonical" href="${canonical}">`;
-  let html = render(layout, { ...meta, content: '%%CONTENT%%', version, canonical, headMeta })
+  let html = render(layout, { ogImage: `${data.site.url}/og.png`, ...meta, content: '%%CONTENT%%', version, canonical, headMeta })
     .replace('%%CONTENT%%', () => content)
     .replace(new RegExp(`data-nav="${meta.nav}"`, 'g'), `data-nav="${meta.nav}" aria-current="page"`);
   const left = html.match(/\{\{[\w:.]+\}\}|<!--\s*@\w+/g);
@@ -89,8 +89,8 @@ if (existsSync(join(BLOG, 'posts.json'))) {
   for (const p of posts) {
     const body = readFileSync(join(BLOG, `${p.slug}.html`), 'utf8');
     const related = posts.filter((x) => x.slug !== p.slug && x.category === p.category).concat(posts.filter((x) => x.slug !== p.slug && x.category !== p.category)).slice(0, 3);
-    const ld = JSON.stringify({ '@context': 'https://schema.org', '@type': 'BlogPosting', headline: p.title, description: p.description, datePublished: p.date, author: { '@type': 'Organization', name: 'RAED Technologies' }, publisher: { '@type': 'Organization', name: 'RAED Technologies', logo: { '@type': 'ImageObject', url: `${data.site.url}/logo.png` } }, mainEntityOfPage: `${data.site.url}/blog/${p.slug}/` }).replace(/</g, '\\u003c');
-    const meta = { title: `${escAttr(p.title)} | RAED Technologies`, description: escAttr(p.description), nav: 'blog', path: `/blog/${p.slug}/` };
+    const ld = JSON.stringify({ '@context': 'https://schema.org', '@type': 'BlogPosting', headline: p.title, description: p.description, image: `${data.site.url}/blog/covers/${p.slug}.jpg`, datePublished: p.date, author: { '@type': 'Organization', name: 'RAED Technologies' }, publisher: { '@type': 'Organization', name: 'RAED Technologies', logo: { '@type': 'ImageObject', url: `${data.site.url}/logo.png` } }, mainEntityOfPage: `${data.site.url}/blog/${p.slug}/` }).replace(/</g, '\\u003c');
+    const meta = { title: `${escAttr(p.title)} | RAED Technologies`, description: escAttr(p.description), nav: 'blog', path: `/blog/${p.slug}/`, ogImage: `${data.site.url}/blog/covers/${p.slug}.jpg` };
     const tpl = read('blog/article.html').replace('%%RELATED%%', () => cards(related)).replace('%%LD%%', () => ld);
     writePage(meta, render(tpl, { ...meta, ...ctxOf(p) }), `blog/${p.slug}`, body);
   }
