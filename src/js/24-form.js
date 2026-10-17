@@ -75,14 +75,14 @@
     submit.querySelector('.cf-submit__label').textContent = on ? 'Sending…' : 'Send Inquiry';
   };
 
-  const success = (email) => {
+  const success = () => {
     const panel = document.createElement('div');
     panel.className = 'cf-success';
     panel.setAttribute('role', 'status');
     panel.tabIndex = -1;
     panel.innerHTML = '<span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>' +
       '<h3>Thank you — your inquiry has been sent.</h3>' +
-      `<p>${email ? `We'll get back to you at <strong>${esc(email)}</strong>.` : "We'll get back to you soon."}</p>`;
+      '<p>Our team will review your details and get back to you within 1–2 business days.</p>';
     form.replaceWith(panel);
     panel.focus({ preventScroll: true });
   };
@@ -95,14 +95,13 @@
     if (subject) subject.value = `New inquiry: ${form.elements.service.value} — ${form.elements.name.value.trim()}`;
     if (!window.fetch || !window.FormData) { form.submit(); return; }
     // Basic bot check: honeypot filled or submitted implausibly fast → pretend success, send nothing.
-    if (form.elements._honey.value || Date.now() - started < 3000) { success(form.elements.email.value.trim()); return; }
+    if (form.elements._honey.value || Date.now() - started < 3000) { success(); return; }
 
     setLoading(true);
-    const email = form.elements.email.value.trim();
     fetch(form.dataset.ajax || form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
       .then((res) => res.json().catch(() => ({})))
       .then((data) => {
-        if (data && String(data.success) === 'true') { success(email); return; }
+        if (data && String(data.success) === 'true') { success(); return; }
         const reason = 'We couldn\'t send your inquiry right now.';
         setStatus(`${reason} Please try again, or email us directly at ${fallback}.`);
         setLoading(false);
@@ -126,7 +125,7 @@
   // No-JS fallback round trip: the form service redirects (_next) to /contact/?sent=1 or ?error=1
   const q = new URLSearchParams(window.location.search);
   if (q.has('sent') || q.has('error')) {
-    if (q.get('sent') === '1') success('');
+    if (q.get('sent') === '1') success();
     else setStatus(`Sorry, your inquiry couldn't be sent. Please check the details and try again, or email us directly at ${fallback}.`);
     if (window.history.replaceState) window.history.replaceState(null, '', window.location.pathname + window.location.hash);
   }
