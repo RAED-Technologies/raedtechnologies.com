@@ -416,6 +416,11 @@
       "name": "Facebook",
       "icon": "facebook",
       "url": "https://www.facebook.com/raedtechnologie"
+    },
+    {
+      "name": "Instagram",
+      "icon": "instagram",
+      "url": "https://www.instagram.com/raedtechnologie/"
     }
   ]
 }
