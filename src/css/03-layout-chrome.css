@@ -62,3 +62,7 @@
 .social-link { display: inline-grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--line-dark); border-radius: 10px; color: var(--text-inv-2); transition: color var(--dur), border-color var(--dur), background var(--dur); }
 .social-link:hover { color: var(--text-inv); border-color: rgba(127,165,255,.45); background: rgba(127,165,255,.08); }
 .social-link .icon { width: 18px; height: 18px; }
+/* Slow-navigation progress bar (see 01-nav-progress.js) */
+.nav-progress { position: fixed; top: 0; left: 0; z-index: 2147482000; width: 100%; height: 3px; pointer-events: none; transform-origin: 0 50%; transform: scaleX(0); background: linear-gradient(90deg, var(--accent), #7FA5FF); box-shadow: 0 0 10px rgba(47,107,255,.6); }
+.nav-progress.is-running { transform: scaleX(.85); transition: transform 8s cubic-bezier(.1,.7,.2,1); }
+@media (prefers-reduced-motion: reduce) { .nav-progress.is-running { transform: scaleX(.6); transition: none; } }
