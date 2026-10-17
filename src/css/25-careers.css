@@ -1,0 +1,22 @@
+/* Careers page: reuses the contact layout and form styles */
+
+.cr-points { display: grid; border-top: 1px solid var(--line); }
+.cr-points .ci-item { align-items: flex-start; }
+.cr-points__title { font-weight: 500; color: var(--text); }
+.cr-points__text { margin-top: .2rem; font-size: var(--fs-sm); color: var(--text-2); }
+
+.cr-steps { margin-top: 2.25rem; }
+.cr-steps ol { display: grid; gap: .85rem; margin-top: 1rem; padding: 0; list-style: none; }
+.cr-steps li { display: flex; gap: .9rem; font-size: var(--fs-sm); color: var(--text-2); }
+.cr-steps li span { flex: none; font-family: var(--mono); font-size: var(--fs-xs); color: var(--accent-ink); padding-top: .15rem; }
+
+/* File input */
+.contact-form .cr-file { padding: .55rem .6rem; cursor: pointer; color: var(--text-2); }
+.cr-file::file-selector-button { margin-right: .9rem; padding: .5rem .9rem; border: 1px solid var(--line); border-radius: calc(var(--radius) - 2px); background: var(--paper-2); font: inherit; font-size: var(--fs-sm); font-weight: 500; color: var(--text); cursor: pointer; transition: border-color var(--dur); }
+.cr-file:hover::file-selector-button { border-color: var(--accent-line); }
+.cr-hint { font-size: var(--fs-xs); color: var(--text-3); }
+
+/* Consent checkbox */
+.cr-consent label { display: flex; align-items: flex-start; gap: .7rem; font-weight: 400; color: var(--text-2); line-height: 1.5; cursor: pointer; }
+.contact-form .cr-consent input { flex: none; width: 1.15rem; min-height: 0; height: 1.15rem; margin-top: .2rem; padding: 0; accent-color: var(--accent); cursor: pointer; }
+.cr-points .icon-box { flex: none; }

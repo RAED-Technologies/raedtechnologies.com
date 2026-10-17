@@ -1,0 +1,87 @@
+<form class="contact-form cr-form" action="{{site.careersAction}}" method="post" enctype="multipart/form-data" novalidate data-careers-form data-ajax="{{site.careersAjax}}" data-fallback="{{site.emailInfo}}">
+  <div class="cf-grid">
+    <div class="cf-field">
+      <label for="cr-name">Full Name <span class="cf-req" aria-hidden="true">*</span></label>
+      <input id="cr-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+    </div>
+    <div class="cf-field">
+      <label for="cr-email">Email <span class="cf-req" aria-hidden="true">*</span></label>
+      <input id="cr-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="160" required>
+    </div>
+    <div class="cf-field">
+      <label for="cr-phone">Phone <span class="cf-req" aria-hidden="true">*</span></label>
+      <input id="cr-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="40" required>
+    </div>
+    <div class="cf-field">
+      <label for="cr-location">Current Location <span class="cf-req" aria-hidden="true">*</span></label>
+      <input id="cr-location" name="location" type="text" autocomplete="address-level2" maxlength="100" placeholder="e.g. Dhaka" required>
+    </div>
+    <div class="cf-field">
+      <label for="cr-position">Position <span class="cf-req" aria-hidden="true">*</span></label>
+      <div class="cf-select">
+        <select id="cr-position" name="position" required>
+          <option value="" selected disabled>Select a position</option>
+          <option>Software Engineer</option>
+          <option>Frontend Developer</option>
+          <option>Backend Developer</option>
+          <option>QA Engineer</option>
+          <option>UI/UX Designer</option>
+          <option>Project Manager</option>
+          <option>Internship</option>
+          <option>General application</option>
+        </select>
+        <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+      </div>
+    </div>
+    <div class="cf-field">
+      <label for="cr-experience">Experience <span class="cf-req" aria-hidden="true">*</span></label>
+      <div class="cf-select">
+        <select id="cr-experience" name="experience" required>
+          <option value="" selected disabled>Select experience</option>
+          <option>Fresher</option>
+          <option>1–2 years</option>
+          <option>3–5 years</option>
+          <option>5+ years</option>
+        </select>
+        <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+      </div>
+    </div>
+    <div class="cf-field">
+      <label for="cr-notice">Availability / Notice Period <span class="cf-req" aria-hidden="true">*</span></label>
+      <input id="cr-notice" name="availability" type="text" maxlength="80" placeholder="e.g. Immediately, 1 month" required>
+    </div>
+    <div class="cf-field">
+      <label for="cr-link">LinkedIn or Portfolio <span class="cf-opt">Optional</span></label>
+      <input id="cr-link" name="link" type="url" inputmode="url" maxlength="200" placeholder="https://">
+    </div>
+    <div class="cf-field cf-field--full">
+      <label for="cr-cv">CV / Resume <span class="cf-req" aria-hidden="true">*</span></label>
+      <input id="cr-cv" class="cr-file" name="attachment" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
+      <p class="cr-hint">PDF, DOC or DOCX, up to 5 MB.</p>
+    </div>
+    <div class="cf-field cf-field--full">
+      <label for="cr-message">Short Note <span class="cf-opt">Optional</span></label>
+      <textarea id="cr-message" name="message" rows="4" maxlength="3000" placeholder="Tell us briefly what you enjoy building and why RAED."></textarea>
+    </div>
+    <div class="cf-field cf-field--full cr-consent">
+      <label for="cr-consent"><input id="cr-consent" name="consent" type="checkbox" value="Yes" required> <span>I agree that RAED Technologies may store my details and CV for recruitment purposes. <span class="cf-req" aria-hidden="true">*</span></span></label>
+    </div>
+  </div>
+  <div class="cf-hp" aria-hidden="true">
+    <label for="cr-website">Website</label>
+    <input id="cr-website" name="_honey" type="text" tabindex="-1" autocomplete="off">
+  </div>
+  <input type="hidden" name="_subject" value="New job application from raedtechnologies.com" data-cf-subject>
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_next" value="{{site.url}}/careers/?sent=1">
+  <div class="cf-foot">
+    <button class="btn btn--primary cf-submit" type="submit" data-cf-submit>
+      <span class="cf-submit__label">Submit Application</span>
+      <svg class="icon" aria-hidden="true"><use href="#i-send"/></svg>
+      <span class="cf-spinner" aria-hidden="true"></span>
+    </button>
+    <p class="cf-privacy">Required fields are marked <span aria-hidden="true">*</span>. Your details are used only for recruitment.</p>
+  </div>
+  <div class="cf-status" role="status" aria-live="polite" data-cf-status></div>
+</form>

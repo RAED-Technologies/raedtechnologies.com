@@ -13,7 +13,9 @@
     "city": "Dhaka",
     "countryCode": "BD",
     "formAction": "https://formsubmit.co/info@raedtechnologies.com",
-    "formAjax": "https://formsubmit.co/ajax/info@raedtechnologies.com"
+    "formAjax": "https://formsubmit.co/ajax/info@raedtechnologies.com",
+    "careersAction": "https://formsubmit.co/c34c93696162aed5f98a81e87faf94a2",
+    "careersAjax": "https://formsubmit.co/ajax/c34c93696162aed5f98a81e87faf94a2"
   },
   "services": [
     {
