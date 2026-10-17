@@ -1,0 +1,92 @@
+<p>In many growing businesses, the most important integration is a person. A sales coordinator copies confirmed orders from email into the order sheet. A planner re-types them into the production plan. An accounts officer enters invoices again into the accounting software, and someone else reconciles all three at month-end. Each system works on its own. The business runs on the people carrying data between them.</p>
+
+<p>API integration is the practical alternative: systems exchanging data directly, under rules you define. This article explains what that means in plain terms, where it pays off for accounts, sales and production, and what to settle before you start.</p>
+
+<h2>What an API is, without the jargon</h2>
+
+<p>An API (application programming interface) is a defined way for one system to ask another for data, or to send it data. Think of it as a service counter with a published menu: the accounting system might offer "create invoice", "get customer balance" and "list payments received". Another system can use those requests automatically, without anyone opening a screen.</p>
+
+<p>Integration means using these counters to keep systems in step. When an order is confirmed in sales, the production system receives it. When goods are shipped, accounts receives the invoice details. When a payment is recorded, sales can see the customer's updated balance.</p>
+
+<blockquote>
+  <p>Every time a person re-types data from one screen into another, the business is paying for an integration it has not built yet.</p>
+</blockquote>
+
+<h2>Where integration pays off</h2>
+
+<h3>Sales to production</h3>
+
+<p>Confirmed orders, with styles, quantities, sizes and delivery dates, flow into planning without re-entry. Changes to an order are reflected in the plan the same day. Production progress flows back, so sales can answer "where is my order?" without phoning the floor.</p>
+
+<h3>Sales and operations to accounts</h3>
+
+<p>Shipments generate invoice data in the accounting system. Purchase receipts create supplier bills for matching. Payments recorded in accounts update customer credit status in sales. Month-end reconciliation becomes a check of exceptions rather than a rebuild of the month.</p>
+
+<h3>Production to inventory and purchasing</h3>
+
+<p>Material issued to production reduces stock automatically. Planned orders generate material requirements, which purchasing can review and convert into orders.</p>
+
+<h3>HR and attendance to payroll</h3>
+
+<p>Attendance devices or systems feed working hours into payroll, with exceptions flagged for review rather than re-entered by hand.</p>
+
+<h3>Your systems to external parties</h3>
+
+<p>Buyer portals, bank platforms, courier services and e-commerce sites increasingly offer APIs. Connecting to them removes manual uploads and downloads, though the work depends on what each party actually provides.</p>
+
+<h2>Decisions to make before you connect anything</h2>
+
+<h3>Which system owns each piece of data?</h3>
+
+<p>For every important item (customer, product, price, order, stock, invoice), decide which system is the master. Customers might be created in sales and copied to accounts, never the other way round. Without this rule, integrations create conflicts and duplicates.</p>
+
+<h3>How quickly must data move?</h3>
+
+<p>Not everything needs to be instant. Order confirmations to production may need to move within minutes. Daily sales summaries to accounts might move once each night. Faster is more complex; choose the speed the business genuinely needs.</p>
+
+<h3>What happens when something fails?</h3>
+
+<p>Networks drop, systems are updated, data arrives in an unexpected format. A good integration logs every message, retries sensibly, and alerts a named person when something cannot be processed. A silent failure, discovered weeks later at month-end, is the worst outcome.</p>
+
+<h3>How will codes match?</h3>
+
+<p>Customer codes in sales, account codes in accounts and buyer codes in production must be mapped to each other. Cleaning and mapping master data is often the largest part of an integration project, and the part most often underestimated.</p>
+
+<h2>Common approaches</h2>
+
+<ul>
+  <li><strong>Direct, point-to-point integration.</strong> One system calls another's API. Simple for two or three connections, harder to manage as the number grows.</li>
+  <li><strong>A central integration layer.</strong> A small service, or an integration platform, sits in the middle, translating and routing data between systems. Better when you have several systems and expect more.</li>
+  <li><strong>Scheduled file exchange.</strong> Where a system has no API, a scheduled export and import of structured files can still remove manual work. It is less elegant, but often perfectly adequate.</li>
+</ul>
+
+<p>The right choice depends on how many systems you have, how often they change, and who will maintain the integration.</p>
+
+<h2>Questions to ask about each system</h2>
+
+<ol>
+  <li>Does it have a documented API, and which operations does it support?</li>
+  <li>Is API access included in our licence, or charged separately?</li>
+  <li>Are there limits on how many requests we can make?</li>
+  <li>How does it authenticate other systems, and can access be limited to what is needed?</li>
+  <li>Will the vendor keep the API stable, and give notice of changes?</li>
+  <li>If there is no API, can we export and import data on a schedule?</li>
+</ol>
+
+<h2>A phased way to start</h2>
+
+<ol>
+  <li><strong>Map the flows.</strong> Draw how data moves between departments today, including every point of re-entry.</li>
+  <li><strong>Pick the most painful re-entry.</strong> Usually the one with the most volume or the most costly errors.</li>
+  <li><strong>Agree data ownership and code mapping</strong> for that flow.</li>
+  <li><strong>Build, with logging and alerts</strong>, and run it alongside the manual process for a short period to compare.</li>
+  <li><strong>Switch off the manual step</strong> once the results match, and move to the next flow.</li>
+</ol>
+
+<h2>What not to expect</h2>
+
+<p>Integration will not fix a process that is unclear, or data that is wrong at the source. If orders are confirmed informally and changed by phone, connecting systems will simply move inconsistent data faster. Settle the process first, then connect it.</p>
+
+<h2>Where RAED fits</h2>
+
+<p>We design and build integrations between accounting, sales, production, HR and external platforms, with clear data ownership, logging and alerts from the start. Where a system has no usable API, we will tell you plainly and propose the most reliable alternative.</p>

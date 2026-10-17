@@ -82,7 +82,8 @@ if (existsSync(join(BLOG, 'posts.json'))) {
   const rest = posts.filter((p) => p !== featured);
 
   const indexMeta = { title: 'Blog | RAED Technologies', description: 'Practical ideas on software, automation, AI and digital transformation for growing businesses in Bangladesh, from the RAED Technologies team.', nav: 'blog', path: '/blog/' };
-  const indexTpl = read('blog/index.html').replace('%%FEATURED%%', () => fill(read('blog/featured.html'), ctxOf(featured))).replace('%%CARDS%%', () => cards(rest));
+  const indexTpl = read('blog/index.html').replace('%%FEATURED%%', () => fill(read('blog/featured.html'), ctxOf(featured))).replace('%%CARDS%%', () => cards(rest))
+    .replace('%%FILTERS%%', () => [...new Set(rest.map((p) => p.category))].map((c) => `        <button type="button" class="bl-filter" aria-pressed="false" data-filter="${escAttr(c)}">${escAttr(c)}</button>`).join('\n'));
   writePage(indexMeta, render(indexTpl, indexMeta), 'blog index');
 
   for (const p of posts) {

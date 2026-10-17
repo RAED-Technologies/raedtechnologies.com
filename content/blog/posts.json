@@ -58,5 +58,85 @@
     "readTime": "5 min read",
     "date": "2026-10-17",
     "featured": false
+  },
+  {
+    "slug": "inventory-control-real-time-stock",
+    "title": "Stock you can trust: from stock registers to real-time inventory control",
+    "category": "Operations",
+    "excerpt": "Why stock registers drift, the five foundations of real-time inventory, cycle counting, and a phased path to one stock figure everyone believes.",
+    "description": "How to move from stock registers to real-time inventory: clean item masters, locations, scanning at the point of movement and cycle counts.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "choosing-software-development-partner",
+    "title": "Before you sign: 12 questions to ask a software development partner",
+    "category": "Strategy",
+    "excerpt": "Twelve questions that reveal how a development partner really works, from discovery and demos to code ownership, support and handover.",
+    "description": "Twelve questions to ask before hiring a software development partner, the warning signs to watch for and how to compare proposals fairly.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "cybersecurity-basics-bangladesh-business",
+    "title": "Cybersecurity basics: 10 controls every growing business in Bangladesh needs",
+    "category": "Security",
+    "excerpt": "Ten practical security controls that prevent most incidents, where Bangladesh's cyber and data protection laws stand, and where to start this week.",
+    "description": "Ten basic cybersecurity controls for growing businesses in Bangladesh, the current legal picture, and a practical order to put them in place.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "dashboards-people-actually-use",
+    "title": "Dashboards people actually use: turning operational data into decisions",
+    "category": "Data",
+    "excerpt": "Most dashboards fade within months. Start from decisions, design for one audience, make numbers trustworthy and build the dashboard into routines.",
+    "description": "How to design dashboards people actually use: start from decisions, agree definitions, show comparisons and build them into daily meetings.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "api-integration-accounts-sales-production",
+    "title": "Connecting your systems: what API integration means for accounts, sales and production",
+    "category": "Integration",
+    "excerpt": "If people re-type data between systems, you are paying for an integration you have not built. What APIs are, where they pay off and how to start.",
+    "description": "What API integration means in practice for accounts, sales and production: data ownership, failure handling, code mapping and a phased start.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "cloud-or-on-premise-guide",
+    "title": "Cloud or on-premise? A practical decision guide for mid-size businesses",
+    "category": "Cloud",
+    "excerpt": "Six questions on connectivity, skills, five-year cost, data obligations, recovery and exit that decide where your systems should run.",
+    "description": "A practical guide to choosing cloud, on-premise or hybrid: connectivity, skills, five-year cost, data location, recovery and exit.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "software-adoption-training-champions",
+    "title": "Getting people to use new software: training, champions and change on the floor",
+    "category": "Delivery",
+    "excerpt": "Systems fail quietly when people keep the old register. How user involvement, champions, role-based training and floor support drive adoption.",
+    "description": "How to get people to use new software: design for users, appoint champions, role-based training, go-live floor support and adoption measures.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "workflow-automation-this-quarter",
+    "title": "Workflow automation you can start this quarter: approvals, reports and notifications",
+    "category": "Automation",
+    "excerpt": "Automate the waiting and the copying. Practical first candidates for approvals, scheduled reports and notifications, with a 12-week plan.",
+    "description": "Workflow automation you can start this quarter: digital approvals, scheduled reports and useful notifications, plus a simple 12-week plan.",
+    "readTime": "4 min read",
+    "date": "2026-10-17",
+    "featured": false
   }
 ]
