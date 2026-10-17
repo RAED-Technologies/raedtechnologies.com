@@ -1,0 +1,108 @@
+<p>Consumer apps are designed to be picked up in seconds by someone who has never seen them. Business software has a different job. It is used for hours a day, by the same people, to do the same tasks hundreds of times. A receptionist booking appointments, an accounts officer approving invoices, a call centre agent logging tickets, a warehouse clerk receiving stock: for them, a clumsy screen is not a minor irritation. It is extra minutes, errors and frustration, every day.</p>
+
+<p>Good user experience in business software is therefore less about looking modern and more about respecting the user's time and attention. This article sets out what that means in practice, and how to build it into a project.</p>
+
+<h2>Design for the expert, support the beginner</h2>
+
+<p>Business software has two kinds of user at once: the new starter who needs guidance, and the experienced user who wants speed. Too often, systems are designed only for the first visit.</p>
+
+<ul>
+  <li><strong>Keyboard support.</strong> Experienced users of data-entry screens should be able to work without the mouse: tab through fields in a logical order, submit with a key, and use shortcuts for common actions.</li>
+  <li><strong>Sensible defaults.</strong> Pre-fill today's date, the user's branch and the most common options.</li>
+  <li><strong>Remember recent choices.</strong> If someone usually works with the same customers, products or locations, put them at the top.</li>
+  <li><strong>Help on the screen.</strong> Short hints next to unfamiliar fields, rather than a manual nobody reads.</li>
+</ul>
+
+<p>Jakob Nielsen's widely used usability heuristics include "flexibility and efficiency of use", which captures this idea well: let expert users speed up their work while keeping the system usable for novices.</p>
+
+<h2>Count the clicks on the tasks that matter</h2>
+
+<p>List the five tasks each role performs most often. For each one, count the steps, clicks and screens involved, and the fields that must be filled. Then ask:</p>
+
+<ul>
+  <li>Which steps exist only because of how the software was built, not because the work needs them?</li>
+  <li>Which fields could be filled automatically from information the system already has?</li>
+  <li>Can the task be done from one screen instead of three?</li>
+</ul>
+
+<p>Saving a few seconds on a task performed a hundred times a day by twenty people adds up quickly. Measure your own tasks rather than relying on general estimates.</p>
+
+<blockquote>
+  <p>In business software, every unnecessary click is paid for by someone, many times a day, for as long as the system is in use.</p>
+</blockquote>
+
+<h2>Show status clearly</h2>
+
+<p>Users should never have to wonder whether something worked. Nielsen's first heuristic, "visibility of system status", is especially important in business systems:</p>
+
+<ul>
+  <li>Confirm saved actions clearly, without blocking pop-ups.</li>
+  <li>Show where a record stands: draft, submitted, approved, rejected, paid.</li>
+  <li>Indicate progress during long operations, such as imports or report generation.</li>
+  <li>Show who last changed a record and when.</li>
+</ul>
+
+<h2>Prevent errors, then make them easy to fix</h2>
+
+<p>Errors in business systems become wrong invoices, wrong stock and wrong decisions. Design to prevent them:</p>
+
+<ul>
+  <li>Validate as people type, with clear messages next to the field, not a list at the top of the form.</li>
+  <li>Use pick-lists instead of free text where the values are known.</li>
+  <li>Ask for confirmation only for actions that are hard to undo, so confirmations are not ignored by habit.</li>
+  <li>Allow corrections, with an audit trail, rather than forcing users to delete and re-enter.</li>
+  <li>Write error messages in plain language that say what went wrong and what to do next.</li>
+</ul>
+
+<h2>Use the user's language</h2>
+
+<p>Screens should use the words people use at work, not the developer's terms. A clinic says "patient" and "visit", a school says "student" and "term", a property manager says "tenant" and "unit". Where staff work more comfortably in Bangla, offer it properly, including for messages, reports and printed documents.</p>
+
+<h2>Design tables for real work</h2>
+
+<p>Much business software is lists and tables. Make them useful:</p>
+
+<ul>
+  <li>Filters and saved views for the questions people ask every day.</li>
+  <li>Sorting and search that work as people expect.</li>
+  <li>Columns users can choose, with sensible defaults per role.</li>
+  <li>Bulk actions for repetitive work, such as approving several items at once.</li>
+  <li>Export when people genuinely need to take data elsewhere.</li>
+</ul>
+
+<h2>Readable and accessible</h2>
+
+<p>People use business software for long periods, often on ordinary monitors in bright offices. Text must be readable. The Web Content Accessibility Guidelines (WCAG) 2.2 set a minimum contrast ratio of 4.5:1 for normal text and 3:1 for large text at level AA. Use readable font sizes, avoid relying on colour alone to show status, and make sure the system works at the screen sizes your staff actually use.</p>
+
+<h2>How to build good UX into a project</h2>
+
+<ol>
+  <li><strong>Watch people work.</strong> Spend time with users doing their real tasks before designing anything. You will learn more in an afternoon than from a requirements document.</li>
+  <li><strong>Prototype the key screens.</strong> Test clickable prototypes with real users before development starts. Changing a prototype is cheap.</li>
+  <li><strong>Test with real data.</strong> Long customer names, many line items and messy addresses reveal problems that neat sample data hides.</li>
+  <li><strong>Review in regular demos.</strong> Include actual users, not only managers, in every demo.</li>
+  <li><strong>Measure after launch.</strong> Time key tasks, track errors and ask users what still slows them down.</li>
+</ol>
+
+<h2>A quick review checklist</h2>
+
+<ul>
+  <li>Can an experienced user complete the most common task without the mouse?</li>
+  <li>Are defaults set for the most common values?</li>
+  <li>Is it always clear whether an action worked?</li>
+  <li>Do error messages explain how to fix the problem?</li>
+  <li>Does the screen use the words users use?</li>
+  <li>Does text meet contrast guidelines?</li>
+  <li>Have real users tested it with real data?</li>
+</ul>
+
+<h2>Where RAED fits</h2>
+
+<p>We design business software by observing the people who will use it, prototyping key screens with them, and testing with real data before and after launch. We also review existing systems and suggest focused changes that save users time.</p>
+
+<h2>Sources</h2>
+
+<ul>
+  <li>Nielsen Norman Group, "10 Usability Heuristics for User Interface Design", Jakob Nielsen, first published 24 April 1994, last reviewed 30 January 2024. <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">nngroup.com</a></li>
+  <li>W3C, "Understanding Success Criterion 1.4.3: Contrast (Minimum)", WCAG 2.2. <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">w3.org</a></li>
+</ul>

@@ -152,6 +152,101 @@ const motifs = {
     s += `<path d="M910 270 C 910 140, 430 140, 430 270" stroke="${BLUE2}" stroke-width="3" fill="none" stroke-dasharray="10 9"/><circle cx="${r1(560 + R() * 200)}" cy="175" r="9" fill="${BLUE2}"/>`;
     return s;
   },
+  Retail(R) { // storefront card + basket + order flow
+    let s = '';
+    s += `<rect x="180" y="150" width="420" height="380" rx="22" fill="#141821" stroke="${DIM}"/><rect x="180" y="150" width="420" height="56" rx="22" fill="rgba(255,255,255,.04)"/><circle cx="214" cy="178" r="7" fill="${DIM}"/><circle cx="238" cy="178" r="7" fill="${DIM}"/>`;
+    for (let i = 0; i < 4; i++) { const x = 210 + (i % 2) * 196, y = 230 + Math.floor(i / 2) * 146; s += `<rect x="${x}" y="${y}" width="170" height="80" rx="12" fill="rgba(127,165,255,${i === 1 ? .35 : .12})"/><path d="M${x} ${y + 100}h${90 + R() * 50}M${x} ${y + 120}h60" stroke="${STROKE}" stroke-width="4" stroke-linecap="round"/>`; }
+    s += `<path d="M700 230h40l40 170h170l36-120H770" stroke="${STROKE}" stroke-width="6" fill="none" stroke-linejoin="round"/><circle cx="800" cy="450" r="20" fill="#141821" stroke="${STROKE}" stroke-width="5"/><circle cx="930" cy="450" r="20" fill="#141821" stroke="${STROKE}" stroke-width="5"/>`;
+    s += `<rect x="820" y="290" width="44" height="44" rx="8" fill="${BLUE}"/><rect x="876" y="300" width="40" height="34" rx="8" fill="rgba(127,165,255,.5)"/><circle cx="1010" cy="220" r="34" fill="${BLUE}"/><path d="M996 220l10 11 20-22" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`;
+    return s;
+  },
+  Healthcare(R) { // cross + patient record + heartbeat
+    let s = '';
+    s += `<rect x="200" y="200" width="220" height="220" rx="44" fill="${BLUE}"/><path d="M310 245v130M245 310h130" stroke="#fff" stroke-width="30" stroke-linecap="round"/>`;
+    s += `<rect x="520" y="140" width="320" height="400" rx="20" fill="#F4F6F9"/><circle cx="580" cy="210" r="30" fill="#C9D1DD"/><path d="M630 196h150M630 222h100" stroke="#9AA3B2" stroke-width="8" stroke-linecap="round"/>`;
+    for (let i = 0; i < 5; i++) s += `<path d="M560 ${290 + i * 44}h${150 + R() * 100}" stroke="#C9D1DD" stroke-width="7" stroke-linecap="round"/>`;
+    s += `<rect x="760" y="440" width="56" height="56" rx="12" fill="${BLUE}"/><rect x="777" y="466" width="22" height="18" rx="3" fill="#fff"/><path d="M780 466v-6a8 8 0 0 1 16 0v6" stroke="#fff" stroke-width="3" fill="none"/>`;
+    s += `<path d="M880 330h60l20-50 30 100 24-70 16 20h90" stroke="${BLUE2}" stroke-width="5" fill="none" stroke-linejoin="round"/>`;
+    return s;
+  },
+  Education(R) { // cap + timetable + progress
+    let s = '';
+    s += `<path d="M320 230l170-70 170 70-170 70z" fill="#141821" stroke="${STROKE}" stroke-width="5" stroke-linejoin="round"/><path d="M400 266v74c0 30 40 52 90 52s90-22 90-52v-74" fill="#141821" stroke="${STROKE}" stroke-width="5"/><path d="M660 230v100" stroke="${BLUE}" stroke-width="5"/><circle cx="660" cy="340" r="12" fill="${BLUE}"/>`;
+    const gx = 740, gy = 170; s += `<rect x="${gx}" y="${gy}" width="320" height="250" rx="20" fill="#141821" stroke="${DIM}"/>`;
+    for (let i = 0; i < 4; i++) for (let j = 0; j < 4; j++) { const on = R() > .55; s += `<rect x="${gx + 20 + i * 74}" y="${gy + 24 + j * 54}" width="62" height="40" rx="8" fill="${on ? (R() > .5 ? 'rgba(127,165,255,.45)' : 'rgba(111,215,155,.35)') : 'rgba(255,255,255,.05)'}"/>`; }
+    s += `<path d="M320 470h420" stroke="rgba(255,255,255,.1)" stroke-width="16" stroke-linecap="round"/><path d="M320 470h${r1(150 + R() * 230)}" stroke="${BLUE}" stroke-width="16" stroke-linecap="round"/>`;
+    return s;
+  },
+  Finance(R) { // phone payment + card + coins
+    let s = '';
+    s += `<rect x="360" y="110" width="230" height="460" rx="34" fill="#0F1218" stroke="${BLUE2}" stroke-width="3"/><rect x="445" y="124" width="60" height="10" rx="5" fill="${DIM}"/>`;
+    s += `<circle cx="475" cy="250" r="60" fill="${BLUE}"/><path d="M450 250l18 18 34-36" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M410 350h130M430 380h90" stroke="${STROKE}" stroke-width="6" stroke-linecap="round"/><rect x="400" y="470" width="150" height="50" rx="14" fill="rgba(127,165,255,.18)"/>`;
+    s += `<g transform="rotate(-10 820 330)"><rect x="680" y="250" width="300" height="180" rx="20" fill="#24406B" stroke="${BLUE2}" stroke-width="2"/><rect x="710" y="290" width="50" height="38" rx="6" fill="#D9A04A"/><path d="M710 380h${r1(120 + R() * 80)}" stroke="rgba(255,255,255,.6)" stroke-width="8" stroke-linecap="round"/></g>`;
+    s += `<path d="M590 330C 630 330, 650 330, 690 330" stroke="${BLUE2}" stroke-width="3" stroke-dasharray="8 7"/>`;
+    for (let i = 0; i < 3; i++) s += `<ellipse cx="900" cy="${520 - i * 18}" rx="56" ry="16" fill="#141821" stroke="${STROKE}" stroke-width="3"/>`;
+    return s;
+  },
+  Logistics(R) { // map route + van + pins
+    let s = '';
+    for (let i = 0; i < 6; i++) s += `<path d="M${120 + i * 200} 120 L${80 + i * 200} 560" stroke="rgba(255,255,255,.05)" stroke-width="18"/>`;
+    const pts = [[220, 470], [420, 300 + R() * 60], [650, 380], [860, 210 + R() * 60], [1000, 300]];
+    let d = `M${pts[0][0]} ${pts[0][1]}`; for (let i = 1; i < pts.length; i++) { const [px, py] = pts[i - 1], [x, y] = pts[i]; d += ` C ${px + 90} ${r1(py)}, ${x - 90} ${r1(y)}, ${x} ${r1(y)}`; }
+    s += `<path d="${d}" stroke="${BLUE}" stroke-width="6" fill="none" stroke-dasharray="16 10"/>`;
+    pts.forEach(([x, y], i) => { if (i === 0 || i === pts.length - 1) s += `<path d="M${x} ${r1(y + 6)}c-24-30-36-48-36-66a36 36 0 0 1 72 0c0 18-12 36-36 66z" fill="${i ? '#6FD79B' : BLUE}"/><circle cx="${x}" cy="${r1(y - 58)}" r="12" fill="${INK}"/>`; else s += `<circle cx="${x}" cy="${r1(y)}" r="10" fill="#E9ECF2"/>`; });
+    const [vx, vy] = pts[2]; s += `<g transform="translate(${vx - 70} ${vy - 120})"><rect width="100" height="56" rx="10" fill="#141821" stroke="${STROKE}" stroke-width="4"/><path d="M100 18h26l18 20v18h-44z" fill="#141821" stroke="${STROKE}" stroke-width="4" stroke-linejoin="round"/><circle cx="26" cy="62" r="12" fill="${INK}" stroke="${STROKE}" stroke-width="4"/><circle cx="118" cy="62" r="12" fill="${INK}" stroke="${STROKE}" stroke-width="4"/></g>`;
+    return s;
+  },
+  'Real Estate'(R) { // buildings with units
+    let s = ''; const bs = [[230, 260, 150, 290], [410, 160, 190, 390], [630, 220, 160, 330], [820, 300, 170, 250]];
+    const hot = [Math.floor(R() * 4), Math.floor(R() * 4)];
+    bs.forEach(([x, y, w, h], bi) => {
+      s += `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="10" fill="#141821" stroke="${bi === 1 ? BLUE2 : DIM}" stroke-width="3"/>`;
+      const cols = Math.floor((w - 20) / 44), rows = Math.floor((h - 70) / 52);
+      for (let c = 0; c < cols; c++) for (let r = 0; r < rows; r++) { const on = bi === 1 && c === hot[0] % cols && r === hot[1] % rows; s += `<rect x="${x + 18 + c * 44}" y="${y + 22 + r * 52}" width="28" height="34" rx="5" fill="${on ? BLUE : R() > .6 ? 'rgba(242,178,92,.45)' : 'rgba(255,255,255,.07)'}"/>`; }
+      s += `<rect x="${x + w / 2 - 18}" y="${y + h - 48}" width="36" height="48" rx="5" fill="rgba(255,255,255,.1)"/>`;
+    });
+    s += `<path d="M180 550h860" stroke="${DIM}" stroke-width="3"/>`;
+    return s;
+  },
+  Startups(R) { // rocket + build-measure-learn loop
+    let s = ''; const cx = 760, cy = 340;
+    s += `<circle cx="${cx}" cy="${cy}" r="170" stroke="${DIM}" stroke-width="3" fill="none" stroke-dasharray="12 12"/>`;
+    [['Build', -90], ['Measure', 30], ['Learn', 150]].forEach(([, a], i) => { const x = cx + Math.cos(a * Math.PI / 180) * 170, y = cy + Math.sin(a * Math.PI / 180) * 170; s += `<circle cx="${r1(x)}" cy="${r1(y)}" r="38" fill="${i === Math.floor(R() * 3) ? BLUE : '#141821'}" stroke="${BLUE2}" stroke-width="3"/>`; });
+    s += `<path d="M${cx + 70} ${cy - 150}a170 170 0 0 1 90 90" stroke="${BLUE}" stroke-width="5" fill="none"/><path d="M${cx + 156} ${cy - 76}l4 20-20-4" stroke="${BLUE}" stroke-width="5" fill="none" stroke-linecap="round"/>`;
+    s += `<g transform="translate(250 150) rotate(35 110 150)"><path d="M110 20c50 40 70 110 50 190H60C40 130 60 60 110 20z" fill="#F4F6F9"/><circle cx="110" cy="110" r="24" fill="${BLUE}" stroke="#24406B" stroke-width="5"/><path d="M60 170l-34 50 44-8M160 170l34 50-44-8" fill="#24406B"/><path d="M85 220c4 40 21 60 25 80 4-20 21-40 25-80z" fill="#F2B25C"/></g>`;
+    return s;
+  },
+  Web(R) { // browser + speed gauge
+    let s = '';
+    s += `<rect x="170" y="140" width="520" height="400" rx="20" fill="#141821" stroke="${DIM}"/><rect x="170" y="140" width="520" height="50" rx="20" fill="rgba(255,255,255,.04)"/><circle cx="204" cy="165" r="7" fill="${DIM}"/><circle cx="228" cy="165" r="7" fill="${DIM}"/><rect x="270" y="155" width="300" height="20" rx="10" fill="rgba(255,255,255,.06)"/>`;
+    s += `<rect x="200" y="220" width="460" height="130" rx="12" fill="rgba(127,165,255,.18)"/><path d="M200 390h300M200 420h220M200 450h260" stroke="${STROKE}" stroke-width="6" stroke-linecap="round"/><rect x="200" y="480" width="140" height="36" rx="10" fill="${BLUE}"/>`;
+    const gx = 880, gy = 380, gr = 150; s += `<path d="M${gx - gr} ${gy}a${gr} ${gr} 0 0 1 ${gr * 2} 0" stroke="rgba(255,255,255,.1)" stroke-width="22" fill="none"/>`;
+    const v = 0.72 + R() * 0.2, ang = Math.PI * (1 - v);
+    s += `<path d="M${gx - gr} ${gy}a${gr} ${gr} 0 0 1 ${r1(gx + Math.cos(ang) * gr - (gx - gr))} ${r1(-Math.sin(ang) * gr)}" stroke="#6FD79B" stroke-width="22" fill="none"/>`;
+    s += `<path d="M${gx} ${gy}L${r1(gx + Math.cos(ang) * (gr - 40))} ${r1(gy - Math.sin(ang) * (gr - 40))}" stroke="#E9ECF2" stroke-width="7" stroke-linecap="round"/><circle cx="${gx}" cy="${gy}" r="14" fill="#E9ECF2"/>`;
+    return s;
+  },
+  Design(R) { // wireframe + cursor + components
+    let s = '';
+    s += `<rect x="180" y="130" width="560" height="420" rx="22" fill="#141821" stroke="${DIM}"/><rect x="200" y="150" width="120" height="380" rx="12" fill="rgba(255,255,255,.04)"/>`;
+    for (let i = 0; i < 5; i++) s += `<rect x="218" y="${176 + i * 46}" width="84" height="22" rx="6" fill="${i === 1 ? BLUE : 'rgba(255,255,255,.08)'}"/>`;
+    s += `<rect x="340" y="150" width="380" height="130" rx="12" fill="none" stroke="${BLUE2}" stroke-width="3" stroke-dasharray="10 8"/><path d="M370 190h200M370 220h140" stroke="${STROKE}" stroke-width="6" stroke-linecap="round"/>`;
+    for (let i = 0; i < 3; i++) s += `<rect x="${340 + i * 130}" y="300" width="118" height="110" rx="12" fill="rgba(255,255,255,.05)" stroke="${DIM}"/>`;
+    s += `<rect x="340" y="430" width="160" height="44" rx="12" fill="${BLUE}"/>`;
+    s += `<path d="M560 450l0 70 20-18 14 32 14-6-14-32 26-2z" fill="#F4F6F9" stroke="${INK}" stroke-width="3" stroke-linejoin="round"/>`;
+    const sw = ['#2F6BFF', '#7FA5FF', '#24406B', '#6FD79B', '#F2B25C']; sw.forEach((c, i) => { s += `<circle cx="${850 + (i % 2) * 90}" cy="${190 + Math.floor(i / 2) * 90}" r="32" fill="${c}"/>`; });
+    s += `<text x="830" y="500" fill="#E9ECF2" font-family="ui-sans-serif,system-ui,sans-serif" font-size="64" font-weight="600">Aa</text>`;
+    return s;
+  },
+  'Customer Experience'(R) { // chat with AI → handover to person
+    let s = '';
+    const bubble = (x, y, w, mine, lines) => { let b = `<rect x="${x}" y="${y}" width="${w}" height="${30 + lines * 26}" rx="22" fill="${mine ? BLUE : '#141821'}" stroke="${mine ? 'none' : DIM}"/>`; for (let i = 0; i < lines; i++) b += `<path d="M${x + 24} ${y + 28 + i * 26}h${w - 60 - (i === lines - 1 ? 60 : 0)}" stroke="${mine ? 'rgba(255,255,255,.8)' : STROKE}" stroke-width="6" stroke-linecap="round"/>`; return b; };
+    s += bubble(240, 130, 380, false, 2) + bubble(470, 240, 330, true, 1) + bubble(240, 320, 420, false, 3);
+    s += `<rect x="170" y="140" width="50" height="50" rx="14" fill="#24406B"/><path d="M184 160h22M184 172h14" stroke="#fff" stroke-width="4" stroke-linecap="round"/><circle cx="836" cy="270" r="26" fill="#24406B"/>`;
+    s += `<path d="M680 470 C 760 470, 800 420, 860 420" stroke="${BLUE2}" stroke-width="3" stroke-dasharray="8 7" fill="none"/>`;
+    s += `<circle cx="930" cy="400" r="40" fill="#141821" stroke="#6FD79B" stroke-width="4"/><path d="M890 500c0-40 18-62 40-62s40 22 40 62" fill="#141821" stroke="#6FD79B" stroke-width="4"/><rect x="980" y="360" width="120" height="44" rx="14" fill="rgba(111,215,155,.15)" stroke="rgba(111,215,155,.7)"/><path d="M1000 382h80" stroke="#6FD79B" stroke-width="5" stroke-linecap="round"/>`;
+    return s;
+  },
   mobile(R) { // phones with scan + list screens
     let s = '';
     const phone = (x, y, w, h, hot) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="34" fill="#0F1218" stroke="${hot ? BLUE2 : DIM}" stroke-width="3"/><rect x="${x + w / 2 - 30}" y="${y + 14}" width="60" height="10" rx="5" fill="${DIM}"/>`;
@@ -242,6 +337,7 @@ const motifs = {
 
 // Topic-specific art for posts whose category already has several covers
 const COVER = {
+  'ldc-graduation-traceability-factory-data': 'Industry',
   'mobile-apps-field-floor-teams': 'mobile',
   'digital-order-tracking-merchandisers': 'order',
   'preventive-maintenance-without-paperwork': 'maintenance',

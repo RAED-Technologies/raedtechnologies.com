@@ -1,21 +1,31 @@
 [
   {
-    "slug": "qr-tracking-factory-floor",
-    "title": "From paper to scan: what QR tracking really changes on a factory floor",
-    "category": "Manufacturing",
-    "excerpt": "Roll to bundle to carton: how QR scanning and gates turn floor knowledge into records you can search, and why adoption decides success.",
-    "description": "What QR-based roll, bundle and carton tracking changes on a garment floor, where to place gates, and how to get operators to scan.",
-    "readTime": "6 min read",
+    "slug": "practical-ai-for-business-2026",
+    "title": "Practical AI in 2026: where it earns its place, and where it doesn't",
+    "category": "AI",
+    "excerpt": "Where AI genuinely saves time in a mid-size business today, where it does not, and how to build in human review and protect your data.",
+    "description": "Where AI adds real value for mid-size businesses in 2026, where it does not, and how to handle human review and data privacy.",
+    "readTime": "5 min read",
     "date": "2026-10-17",
     "featured": true
   },
   {
-    "slug": "ldc-graduation-traceability-factory-data",
-    "title": "LDC graduation and buyer traceability: why factory data is now a business asset",
-    "category": "Industry",
-    "excerpt": "Graduation will reshape trade preferences while EU and US rules push buyers to demand proof. What is confirmed, what is pending, and what to do now.",
-    "description": "Bangladesh's LDC graduation, EU GSP changes and buyer traceability rules: what is confirmed, what is pending, and how factories can prepare.",
+    "slug": "ecommerce-beyond-the-storefront",
+    "title": "Behind the storefront: what an online store really needs to run well",
+    "category": "Retail",
+    "excerpt": "Orders from every channel, stock that stays in sync, payments confirmed properly, tracked delivery and returns that close: the back office behind a good shop.",
+    "description": "What an online store needs behind the storefront: one order list, synced stock, verified payments, courier tracking and a proper returns process.",
     "readTime": "6 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "startup-mvp-build-right-first-version",
+    "title": "Building an MVP: how to ship a first version that teaches you something",
+    "category": "Startups",
+    "excerpt": "An MVP is an experiment with a product attached. Test the riskiest assumption, keep scope small but foundations solid, and decide success criteria before launch.",
+    "description": "How to build an MVP that teaches you something: find the riskiest assumption, cut scope, keep solid foundations and set success measures first.",
+    "readTime": "5 min read",
     "date": "2026-10-17",
     "featured": false
   },
@@ -30,11 +40,61 @@
     "featured": false
   },
   {
-    "slug": "practical-ai-for-business-2026",
-    "title": "Practical AI in 2026: where it earns its place, and where it doesn't",
-    "category": "AI",
-    "excerpt": "Where AI genuinely saves time in a mid-size business today, where it does not, and how to build in human review and protect your data.",
-    "description": "Where AI adds real value for mid-size businesses in 2026, where it does not, and how to handle human review and data privacy.",
+    "slug": "digital-clinic-patient-records",
+    "title": "Digitising a clinic: appointments, patient records and privacy done properly",
+    "category": "Healthcare",
+    "excerpt": "One calendar, one record per patient and privacy built in from day one: a phased path for clinics and diagnostic centres moving off paper.",
+    "description": "How to digitise a clinic: appointment scheduling, patient records doctors will use, access control, audit trails and data protection basics.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "fintech-mfs-payment-integration",
+    "title": "Accepting digital payments in Bangladesh: integrating mobile wallets and gateways safely",
+    "category": "Finance",
+    "excerpt": "Direct wallet integration or a gateway? The options, the safety rules that apply to all of them, and a pre-launch checklist for refunds and reconciliation.",
+    "description": "How to integrate bKash, Nagad and payment gateways safely: server-side validation, notifications, refunds, reconciliation and a launch checklist.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "website-speed-seo-conversions",
+    "title": "Why your website is slow, and what speed costs you in search and enquiries",
+    "category": "Web",
+    "excerpt": "What Core Web Vitals measure, what speed does and does not do for search, the usual causes of slow business sites and fixes in a sensible order.",
+    "description": "Why business websites are slow, Google's Core Web Vitals thresholds, how speed affects search and enquiries, and practical fixes in order.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "ai-chatbots-customer-support",
+    "title": "AI assistants for customer support: what to automate and where a person must stay",
+    "category": "Customer Experience",
+    "excerpt": "What AI assistants handle well, which conversations need a person, how to answer from approved content and how to introduce an assistant safely.",
+    "description": "AI chatbots for customer support: what to automate, where people must stay involved, accuracy, hand-offs, data protection and a safe rollout.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "school-management-systems-what-matters",
+    "title": "School and training-centre management systems: what actually matters",
+    "category": "Education",
+    "excerpt": "Enrolment, attendance, fees and results create most of the work. Get these four right, protect children's data and introduce the system without disrupting a term.",
+    "description": "What matters in a school or training-centre management system: student records, attendance, fees, results, children's data and a calm rollout.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "logistics-delivery-tracking",
+    "title": "Delivery and fleet tracking: from phone calls to live status customers can see",
+    "category": "Logistics",
+    "excerpt": "Statuses before maps: how rider apps, exception-based dispatch and customer updates replace phone calls, and how delivery data drives improvement.",
+    "description": "How to build delivery tracking that works: clear statuses, an offline rider app, exception-based dispatch, customer updates and useful measures.",
     "readTime": "5 min read",
     "date": "2026-10-17",
     "featured": false
@@ -50,31 +110,21 @@
     "featured": false
   },
   {
-    "slug": "scope-software-project-on-time-on-budget",
-    "title": "How to scope a software project so it lands on time and on budget",
-    "category": "Delivery",
-    "excerpt": "Most late projects fail at the start and the end. Discovery, phased releases, two-weekly demos, clear acceptance and agreed support fix both.",
-    "description": "How to scope software projects that land on time: discovery, phased delivery, two-weekly demos, acceptance criteria, warranty and support.",
+    "slug": "ux-design-business-software",
+    "title": "Good UX in business software: designing for the people who use it all day",
+    "category": "Design",
+    "excerpt": "Business software is used for hours a day. Design for experts and beginners, cut clicks on frequent tasks, prevent errors and test with real users and data.",
+    "description": "Good UX in business software: keyboard-friendly data entry, fewer clicks, clear status, error prevention, readable screens and testing with real users.",
     "readTime": "5 min read",
     "date": "2026-10-17",
     "featured": false
   },
   {
-    "slug": "inventory-control-real-time-stock",
-    "title": "Stock you can trust: from stock registers to real-time inventory control",
-    "category": "Operations",
-    "excerpt": "Why stock registers drift, the five foundations of real-time inventory, cycle counting, and a phased path to one stock figure everyone believes.",
-    "description": "How to move from stock registers to real-time inventory: clean item masters, locations, scanning at the point of movement and cycle counts.",
-    "readTime": "5 min read",
-    "date": "2026-10-17",
-    "featured": false
-  },
-  {
-    "slug": "choosing-software-development-partner",
-    "title": "Before you sign: 12 questions to ask a software development partner",
-    "category": "Strategy",
-    "excerpt": "Twelve questions that reveal how a development partner really works, from discovery and demos to code ownership, support and handover.",
-    "description": "Twelve questions to ask before hiring a software development partner, the warning signs to watch for and how to compare proposals fairly.",
+    "slug": "real-estate-property-management-software",
+    "title": "Property and tenant management software: rent, maintenance and owner reporting",
+    "category": "Real Estate",
+    "excerpt": "Tenancies recorded properly, dues generated automatically, maintenance tracked and owner statements built from daily records: a guide for landlords and managers.",
+    "description": "What property management software should do: tenancies, rent collection, arrears, maintenance requests and owner reporting, with a phased rollout.",
     "readTime": "5 min read",
     "date": "2026-10-17",
     "featured": false
@@ -90,21 +140,11 @@
     "featured": false
   },
   {
-    "slug": "dashboards-people-actually-use",
-    "title": "Dashboards people actually use: turning operational data into decisions",
-    "category": "Data",
-    "excerpt": "Most dashboards fade within months. Start from decisions, design for one audience, make numbers trustworthy and build the dashboard into routines.",
-    "description": "How to design dashboards people actually use: start from decisions, agree definitions, show comparisons and build them into daily meetings.",
-    "readTime": "5 min read",
-    "date": "2026-10-17",
-    "featured": false
-  },
-  {
-    "slug": "api-integration-accounts-sales-production",
-    "title": "Connecting your systems: what API integration means for accounts, sales and production",
-    "category": "Integration",
-    "excerpt": "If people re-type data between systems, you are paying for an integration you have not built. What APIs are, where they pay off and how to start.",
-    "description": "What API integration means in practice for accounts, sales and production: data ownership, failure handling, code mapping and a phased start.",
+    "slug": "scope-software-project-on-time-on-budget",
+    "title": "How to scope a software project so it lands on time and on budget",
+    "category": "Delivery",
+    "excerpt": "Most late projects fail at the start and the end. Discovery, phased releases, two-weekly demos, clear acceptance and agreed support fix both.",
+    "description": "How to scope software projects that land on time: discovery, phased delivery, two-weekly demos, acceptance criteria, warranty and support.",
     "readTime": "5 min read",
     "date": "2026-10-17",
     "featured": false
@@ -120,11 +160,21 @@
     "featured": false
   },
   {
-    "slug": "software-adoption-training-champions",
-    "title": "Getting people to use new software: training, champions and change on the floor",
-    "category": "Delivery",
-    "excerpt": "Systems fail quietly when people keep the old register. How user involvement, champions, role-based training and floor support drive adoption.",
-    "description": "How to get people to use new software: design for users, appoint champions, role-based training, go-live floor support and adoption measures.",
+    "slug": "api-integration-accounts-sales-production",
+    "title": "Connecting your systems: what API integration means for accounts, sales and production",
+    "category": "Integration",
+    "excerpt": "If people re-type data between systems, you are paying for an integration you have not built. What APIs are, where they pay off and how to start.",
+    "description": "What API integration means in practice for accounts, sales and production: data ownership, failure handling, code mapping and a phased start.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "dashboards-people-actually-use",
+    "title": "Dashboards people actually use: turning operational data into decisions",
+    "category": "Data",
+    "excerpt": "Most dashboards fade within months. Start from decisions, design for one audience, make numbers trustworthy and build the dashboard into routines.",
+    "description": "How to design dashboards people actually use: start from decisions, agree definitions, show comparisons and build them into daily meetings.",
     "readTime": "5 min read",
     "date": "2026-10-17",
     "featured": false
@@ -140,11 +190,101 @@
     "featured": false
   },
   {
+    "slug": "choosing-software-development-partner",
+    "title": "Before you sign: 12 questions to ask a software development partner",
+    "category": "Strategy",
+    "excerpt": "Twelve questions that reveal how a development partner really works, from discovery and demos to code ownership, support and handover.",
+    "description": "Twelve questions to ask before hiring a software development partner, the warning signs to watch for and how to compare proposals fairly.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "ai-document-processing-human-review",
+    "title": "AI for documents: reading invoices, POs and delivery notes with a human in the loop",
+    "category": "AI",
+    "excerpt": "AI can read invoices, purchase orders and challans well, but not perfectly. How to combine extraction, validation rules and fast human review.",
+    "description": "Using AI to read invoices, purchase orders and delivery notes: extraction, validation rules, human review, honest measurement and data protection.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "inventory-control-real-time-stock",
+    "title": "Stock you can trust: from stock registers to real-time inventory control",
+    "category": "Operations",
+    "excerpt": "Why stock registers drift, the five foundations of real-time inventory, cycle counting, and a phased path to one stock figure everyone believes.",
+    "description": "How to move from stock registers to real-time inventory: clean item masters, locations, scanning at the point of movement and cycle counts.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
     "slug": "mobile-apps-field-floor-teams",
     "title": "Mobile apps for field and floor teams: what to build, how to work offline, which devices",
     "category": "Operations",
     "excerpt": "Order taking, quality checks, goods receipt and proof of delivery: how to choose the first job, design for real conditions, work offline and pick devices.",
     "description": "What mobile apps to build for field, warehouse and factory teams, why offline working matters, and how to choose devices that survive the job.",
+    "readTime": "6 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "backups-disaster-recovery-mid-size-business",
+    "title": "Backups and disaster recovery: what a mid-size business actually needs",
+    "category": "Security",
+    "excerpt": "Set recovery targets with the business, follow the 3-2-1 rule with one isolated copy, write a short recovery plan and test restores regularly.",
+    "description": "Backups and disaster recovery for mid-size businesses: RPO and RTO, the 3-2-1 rule, ransomware-safe copies, a recovery plan and restore tests.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "attendance-leave-payroll-automation",
+    "title": "Attendance, leave and payroll: automating HR paperwork the right way",
+    "category": "Automation",
+    "excerpt": "From punch data to payslip: what to automate, the Labour Act points your rules must reflect after the 2026 amendment, and how to switch over safely.",
+    "description": "Automating attendance, leave and payroll in Bangladesh: legal baseline after the 2026 amendment, step-by-step automation and a safe switch-over.",
+    "readTime": "6 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "measuring-software-roi-honestly",
+    "title": "Measuring the return on software without inventing numbers",
+    "category": "Strategy",
+    "excerpt": "Borrowed figures and missing baselines make most ROI tables fiction. Five steps to a business case you can measure before and check after go-live.",
+    "description": "How to measure software ROI honestly: measurable problems, a real baseline, full costs, conservative benefits and review points after go-live.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "software-adoption-training-champions",
+    "title": "Getting people to use new software: training, champions and change on the floor",
+    "category": "Delivery",
+    "excerpt": "Systems fail quietly when people keep the old register. How user involvement, champions, role-based training and floor support drive adoption.",
+    "description": "How to get people to use new software: design for users, appoint champions, role-based training, go-live floor support and adoption measures.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "modernising-legacy-software",
+    "title": "Old system, new demands: rebuild, refactor or replace your legacy software?",
+    "category": "Delivery",
+    "excerpt": "When ageing software becomes a liability, a module-by-module framework for choosing to refactor, rebuild or replace, and how to change in stages.",
+    "description": "A practical framework for modernising legacy software: when to refactor, rebuild or replace, unsupported platforms and staged, low-risk change.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "qr-tracking-factory-floor",
+    "title": "From paper to scan: what QR tracking really changes on a factory floor",
+    "category": "Manufacturing",
+    "excerpt": "Roll to bundle to carton: how QR scanning and gates turn floor knowledge into records you can search, and why adoption decides success.",
+    "description": "What QR-based roll, bundle and carton tracking changes on a garment floor, where to place gates, and how to get operators to scan.",
     "readTime": "6 min read",
     "date": "2026-10-17",
     "featured": false
@@ -170,52 +310,12 @@
     "featured": false
   },
   {
-    "slug": "attendance-leave-payroll-automation",
-    "title": "Attendance, leave and payroll: automating HR paperwork the right way",
-    "category": "Automation",
-    "excerpt": "From punch data to payslip: what to automate, the Labour Act points your rules must reflect after the 2026 amendment, and how to switch over safely.",
-    "description": "Automating attendance, leave and payroll in Bangladesh: legal baseline after the 2026 amendment, step-by-step automation and a safe switch-over.",
+    "slug": "ldc-graduation-traceability-factory-data",
+    "title": "LDC graduation and buyer traceability: why factory data is now a business asset",
+    "category": "Manufacturing",
+    "excerpt": "Graduation will reshape trade preferences while EU and US rules push buyers to demand proof. What is confirmed, what is pending, and what to do now.",
+    "description": "Bangladesh's LDC graduation, EU GSP changes and buyer traceability rules: what is confirmed, what is pending, and how factories can prepare.",
     "readTime": "6 min read",
-    "date": "2026-10-17",
-    "featured": false
-  },
-  {
-    "slug": "ai-document-processing-human-review",
-    "title": "AI for documents: reading invoices, POs and delivery notes with a human in the loop",
-    "category": "AI",
-    "excerpt": "AI can read invoices, purchase orders and challans well, but not perfectly. How to combine extraction, validation rules and fast human review.",
-    "description": "Using AI to read invoices, purchase orders and delivery notes: extraction, validation rules, human review, honest measurement and data protection.",
-    "readTime": "5 min read",
-    "date": "2026-10-17",
-    "featured": false
-  },
-  {
-    "slug": "backups-disaster-recovery-mid-size-business",
-    "title": "Backups and disaster recovery: what a mid-size business actually needs",
-    "category": "Security",
-    "excerpt": "Set recovery targets with the business, follow the 3-2-1 rule with one isolated copy, write a short recovery plan and test restores regularly.",
-    "description": "Backups and disaster recovery for mid-size businesses: RPO and RTO, the 3-2-1 rule, ransomware-safe copies, a recovery plan and restore tests.",
-    "readTime": "5 min read",
-    "date": "2026-10-17",
-    "featured": false
-  },
-  {
-    "slug": "measuring-software-roi-honestly",
-    "title": "Measuring the return on software without inventing numbers",
-    "category": "Strategy",
-    "excerpt": "Borrowed figures and missing baselines make most ROI tables fiction. Five steps to a business case you can measure before and check after go-live.",
-    "description": "How to measure software ROI honestly: measurable problems, a real baseline, full costs, conservative benefits and review points after go-live.",
-    "readTime": "5 min read",
-    "date": "2026-10-17",
-    "featured": false
-  },
-  {
-    "slug": "modernising-legacy-software",
-    "title": "Old system, new demands: rebuild, refactor or replace your legacy software?",
-    "category": "Delivery",
-    "excerpt": "When ageing software becomes a liability, a module-by-module framework for choosing to refactor, rebuild or replace, and how to change in stages.",
-    "description": "A practical framework for modernising legacy software: when to refactor, rebuild or replace, unsupported platforms and staged, low-risk change.",
-    "readTime": "5 min read",
     "date": "2026-10-17",
     "featured": false
   }

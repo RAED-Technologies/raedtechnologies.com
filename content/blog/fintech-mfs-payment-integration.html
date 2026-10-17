@@ -1,0 +1,104 @@
+<p>For many customers in Bangladesh, paying by mobile wallet is now more natural than paying by card. Businesses of every kind, from online shops and clinics to schools, travel agents and subscription services, want to accept bKash, Nagad, cards and bank transfers without asking customers to send money to a personal number and post a screenshot.</p>
+
+<p>Integrating digital payments properly is not difficult, but it is easy to do carelessly. The mistakes are expensive: orders marked paid that were never paid, refunds issued twice, and reconciliation that takes days. This article explains the main integration options, the safety rules that apply to all of them, and a checklist to use before going live.</p>
+
+<h2>The three common routes</h2>
+
+<h3>1. Direct integration with a mobile financial service</h3>
+
+<p>Providers such as bKash and Nagad offer merchant integrations for online payments. Expect to open a merchant account with each provider before you can accept live payments, and confirm the onboarding steps with them directly.</p>
+
+<ul>
+  <li><strong>bKash</strong> publishes developer documentation for its tokenized checkout, covering payment creation and execution, an optional agreement flow for returning customers, query and search APIs to check a payment's status, refunds, and instant payment notifications.</li>
+  <li><strong>Nagad</strong> publishes an official WooCommerce plugin which requires a Nagad merchant account, merchant and gateway keys, and a callback URL that Nagad whitelists. Sites hosted outside Bangladesh must also have their server IP address whitelisted. For other platforms, arrange documentation and test access through Nagad's merchant team.</li>
+</ul>
+
+<p>Direct integration usually suits businesses whose customers overwhelmingly prefer one or two wallets.</p>
+
+<h3>2. A payment gateway that aggregates methods</h3>
+
+<p>Gateways such as SSLCommerz bring cards, mobile wallets and internet banking together behind one integration and one hosted payment page. SSLCommerz's developer documentation describes a sandbox environment for test transactions, a server-side session initiation, a redirect to the hosted payment page, an instant payment notification (IPN) to your server, and an order validation API.</p>
+
+<p>A gateway suits businesses that want to offer many methods without maintaining several integrations, at the cost of gateway fees and one more party between you and the money.</p>
+
+<h3>3. Manual collection with reconciliation</h3>
+
+<p>Some businesses still collect to a merchant number and match transaction IDs by hand. This can work at very low volume, but it does not scale and it is open to error and fraud. If you stay here for now, at least record every transaction ID against an invoice and reconcile daily.</p>
+
+<h2>Safety rules that apply to every route</h2>
+
+<p>The technical details differ by provider. The principles do not.</p>
+
+<h3>Confirm on the server, never in the browser</h3>
+
+<p>A customer returning to a "success" page proves nothing. The browser can close, the network can drop, and a success URL can be visited directly. SSLCommerz's documentation is explicit that merchants must call its validation API to validate the transaction and amount, and must compare the amount with their own database before updating an order. bKash provides query APIs for the same purpose. Only your server, talking directly to the provider, should mark an order as paid.</p>
+
+<blockquote>
+  <p>An order is paid when the provider confirms it to your server and the amount matches. Everything else is a customer's browser telling you what you want to hear.</p>
+</blockquote>
+
+<h3>Use notifications as well as redirects</h3>
+
+<p>Set up the provider's payment notification so that your system learns about successful payments even when the customer never returns to your site. Make your handler safe to receive the same notification more than once.</p>
+
+<h3>Keep secrets on the server</h3>
+
+<p>API keys, merchant passwords and private keys belong on your server, never in a mobile app, a web page's code or a shared document. Rotate them when staff with access leave.</p>
+
+<h3>One transaction ID, one order</h3>
+
+<p>Generate a unique reference for every payment attempt and store it with the order. Reject a confirmation for a reference you have already processed. This single rule prevents most double-crediting problems.</p>
+
+<h3>Respect the provider's risk signals</h3>
+
+<p>Some gateways return a risk indicator. SSLCommerz's documentation advises holding the service for transactions flagged as high risk until you have verified them. Decide in advance who reviews these and how quickly.</p>
+
+<h3>Do not touch card numbers</h3>
+
+<p>Use the provider's hosted payment page or approved components, so card details never pass through or rest on your systems. Handling card data yourself brings substantial security and compliance obligations that most businesses do not need.</p>
+
+<h2>Refunds and reconciliation</h2>
+
+<p>Integration is not finished when money comes in. Plan for the rest of the cycle:</p>
+
+<ul>
+  <li><strong>Refunds through the provider's refund API</strong>, linked to the original payment, with an approver and a logged reason.</li>
+  <li><strong>Daily reconciliation</strong> of your paid orders against the provider's settlement report, with exceptions listed for someone to resolve.</li>
+  <li><strong>Fees recorded separately</strong>, so your accounts show gross sales, provider charges and net settlement clearly.</li>
+  <li><strong>A pending state</strong> for payments that were started but not confirmed, with an automatic status check after a set time.</li>
+</ul>
+
+<h2>A pre-launch checklist</h2>
+
+<ol>
+  <li>Merchant accounts approved and live credentials stored securely on the server.</li>
+  <li>Full flow tested in the sandbox: success, failure, cancellation, timeout and duplicate notification.</li>
+  <li>Server-side validation in place, with amount and currency checked against the order.</li>
+  <li>Notification handler live and tested, and safe to receive repeats.</li>
+  <li>Refund process tested end to end with a small real transaction.</li>
+  <li>Reconciliation report agreed with your accounts team.</li>
+  <li>Customer messages clear: what happens on success, on failure and when a payment is pending.</li>
+  <li>Logs kept for every payment attempt, without storing sensitive credentials.</li>
+</ol>
+
+<h2>Choosing your route</h2>
+
+<ul>
+  <li><strong>Mostly one wallet, simple products:</strong> direct integration with that provider.</li>
+  <li><strong>Mixed customers, cards and wallets:</strong> a gateway, possibly with a direct wallet integration added later if fees or experience justify it.</li>
+  <li><strong>Subscriptions or repeat payments:</strong> check which providers support saved agreements or tokens for returning customers, and what consent they require.</li>
+</ul>
+
+<p>Provider products, fees and requirements change, so confirm current terms directly with each provider before committing.</p>
+
+<h2>Where RAED fits</h2>
+
+<p>We integrate mobile financial services and payment gateways into websites, apps and business systems, with server-side validation, notifications, refunds and reconciliation built in from the start. We also review existing integrations for the gaps described above.</p>
+
+<h2>Sources</h2>
+
+<ul>
+  <li>SSLCommerz, Developer documentation (API v4): sandbox, IPN and Order Validation API. <a href="https://developer.sslcommerz.com/doc/v4/">developer.sslcommerz.com</a></li>
+  <li>bKash, Developer documentation: tokenized checkout, query and search APIs, refunds and instant payment notification. <a href="https://developer.bka.sh/">developer.bka.sh</a></li>
+  <li>Nagad Limited, "Nagad Payment Gateway" plugin for WooCommerce, WordPress.org. <a href="https://wordpress.org/plugins/nagad-payment-gateway/">wordpress.org</a></li>
+</ul>

@@ -83,7 +83,13 @@ if (existsSync(join(BLOG, 'posts.json'))) {
 
   const indexMeta = { title: 'Blog | RAED Technologies', description: 'Practical ideas on software, automation, AI and digital transformation for growing businesses in Bangladesh, from the RAED Technologies team.', nav: 'blog', path: '/blog/' };
   const indexTpl = read('blog/index.html').replace('%%FEATURED%%', () => fill(read('blog/featured.html'), ctxOf(featured))).replace('%%CARDS%%', () => cards(rest))
-    .replace('%%FILTERS%%', () => [...new Set(rest.map((p) => p.category))].map((c) => `        <button type="button" class="bl-filter" aria-pressed="false" data-filter="${escAttr(c)}">${escAttr(c)}</button>`).join('\n'));
+    .replace('%%FILTERS%%', () => {
+      const INDUSTRIES = ['Retail', 'Healthcare', 'Education', 'Finance', 'Logistics', 'Real Estate', 'Startups', 'Manufacturing'];
+      const cats = [...new Set(rest.map((p) => p.category))];
+      const btn = (c) => `          <button type="button" class="bl-filter" aria-pressed="false" data-filter="${escAttr(c)}">${escAttr(c)}</button>`;
+      const row = (label, list) => list.length ? `        <div class="bl-filters__row"><span class="bl-filters__label">${label}</span><div class="bl-filters__chips">\n${list.map(btn).join('\n')}\n        </div></div>` : '';
+      return [row('Industry', INDUSTRIES.filter((c) => cats.includes(c))), row('Topic', cats.filter((c) => !INDUSTRIES.includes(c)))].join('\n');
+    });
   writePage(indexMeta, render(indexTpl, indexMeta), 'blog index');
 
   for (const p of posts) {
