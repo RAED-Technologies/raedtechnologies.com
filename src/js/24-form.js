@@ -3,7 +3,7 @@
   const form = document.querySelector('[data-contact-form]');
   if (!form) return;
 
-  const FALLBACK = form.dataset.fallback || 'dev@raedtechnologies.com';
+  const FALLBACK = form.dataset.fallback || 'info@raedtechnologies.com';
   const status = form.querySelector('[data-cf-status]');
   const submit = form.querySelector('[data-cf-submit]');
   const started = Date.now();
