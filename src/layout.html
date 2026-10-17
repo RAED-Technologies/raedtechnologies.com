@@ -7,22 +7,29 @@
   <meta name="description" content="{{description}}">
 {{headMeta}}
   <meta name="theme-color" content="#0B0D12">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="{{ogType}}">
   <meta property="og:site_name" content="RAED Technologies">
+  <meta property="og:locale" content="en_US">
   <meta property="og:title" content="{{title}}">
   <meta property="og:description" content="{{description}}">
   <meta property="og:url" content="{{canonical}}">
   <meta property="og:image" content="{{ogImage}}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{title}}">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@RAEDTechnologie">
+  <meta name="twitter:title" content="{{title}}">
+  <meta name="twitter:description" content="{{description}}">
   <meta name="twitter:image" content="{{ogImage}}">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="/assets/site.css?v={{version}}">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"RAED Technologies","url":"{{site.url}}","email":"{{site.emailInfo}}","telephone":"{{site.phone}}","logo":"{{site.url}}/logo.png","foundingDate":"2025","address":{"@type":"PostalAddress","addressLocality":"{{site.city}}","addressCountry":"{{site.countryCode}}"},"sameAs":["https://www.linkedin.com/company/raed-technologies/","https://x.com/RAEDTechnologie","https://www.facebook.com/raedtechnologie","https://www.instagram.com/raedtechnologie/"]}</script>
+  <script type="application/ld+json">{{ldJson}}</script>
   <style id="splash-css">
     .splash{position:fixed;inset:0;z-index:2147483000;display:grid;place-items:center;background:#0B0D12;color:#F4F5F7;transition:opacity .5s cubic-bezier(.2,.7,.2,1),visibility .5s,transform .5s cubic-bezier(.2,.7,.2,1)}
     .splash::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse 45% 45% at 50% 50%,#000,transparent 75%);mask-image:radial-gradient(ellipse 45% 45% at 50% 50%,#000,transparent 75%)}
