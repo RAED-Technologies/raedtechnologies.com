@@ -10,7 +10,6 @@
 .pf-case__media img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; }
 .pf-case__bar { display: flex; align-items: center; gap: .4rem; padding: .65rem .9rem; background: var(--ink); }
 .pf-case__bar span { width: .6rem; height: .6rem; border-radius: 50%; background: rgba(255,255,255,.22); }
-.pf-case__bar em { margin-left: .6rem; font-family: var(--mono); font-size: var(--fs-xs); font-style: normal; letter-spacing: .04em; color: var(--text-inv-2); }
 .pf-case__body { display: flex; flex-direction: column; align-items: flex-start; }
 .pf-case__meta { display: flex; align-items: center; gap: .75rem; font-family: var(--mono); font-size: var(--fs-xs); color: var(--text-3); }
 .pf-case__title { margin-top: 1rem; font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.25rem); line-height: 1.15; letter-spacing: -.02em; }
