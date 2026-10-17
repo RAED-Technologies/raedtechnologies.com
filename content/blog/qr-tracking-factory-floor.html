@@ -1,0 +1,98 @@
+<p>Most factories already know where their fabric is. The problem is that they know it the way a good supervisor knows it: from memory, from a register at the store, from a phone call to the cutting section. When that supervisor is on leave, when a buyer asks which rolls went into a particular carton, or when two registers disagree, the answer takes hours or days. A QR-based tracking system does not make the factory smarter. It makes what the factory already knows visible, consistent and quick to retrieve.</p>
+
+<p>This article looks at what actually changes when a floor moves from paper to scanning, what it takes to get there, and where projects usually go wrong.</p>
+
+<h2>What "traceability" means on a garment floor</h2>
+
+<p>In practice, traceability is a chain of links between physical things. For a typical woven or knit garment operation, the chain looks like this:</p>
+
+<ul>
+  <li><strong>Roll</strong>: fabric received against a purchase order, with supplier, lot, shade and width.</li>
+  <li><strong>Lay and cut</strong>: rolls consumed into a marker, producing bundles of cut panels.</li>
+  <li><strong>Bundle</strong>: a numbered group of pieces with size, colour and quantity, moving through sewing lines.</li>
+  <li><strong>Garment and carton</strong>: finished pieces checked, packed and assigned to a carton and a shipment.</li>
+</ul>
+
+<p>On paper, every link exists, but it lives in a different book. The store has a roll register. Cutting has a lay report. Sewing has bundle tickets. Finishing has a packing list. Joining them back together means people reading and matching records by hand.</p>
+
+<p>With QR codes, each roll, bundle and carton gets a label at the point it is created. Every time it crosses a defined point, someone scans it. The links are recorded as they happen, not reconstructed afterwards.</p>
+
+<h2>What really changes</h2>
+
+<h3>1. Questions get answered in minutes, not days</h3>
+
+<p>"Which rolls went into carton 214?" "How many bundles of size M are still in line 3?" "Has this lot been inspected?" These are routine questions, and on paper each one needs a person to go and look. When the scan history is in one place, the answer is a search. The time saved is not only the clerk's; it is the merchandiser's, the planner's and, eventually, the buyer's.</p>
+
+<h3>2. Gates replace good intentions</h3>
+
+<p>A <em>gate</em> is a point where an item cannot move forward without a scan. Fabric cannot be issued to cutting until the roll has been inspected. A carton cannot be loaded unless its contents match the packing list. Gates are where tracking stops being a report and starts being a control.</p>
+
+<p>The useful question is not "where can we scan?" but "where does a mistake cost us most?". Good first gates are usually:</p>
+
+<ul>
+  <li>Fabric receiving and inspection (wrong lot or shade causes the costliest rework).</li>
+  <li>Issue from store to cutting (prevents uninspected or wrong rolls being cut).</li>
+  <li>Bundle entry to and exit from a sewing line (gives real work-in-progress, not estimated).</li>
+  <li>Carton close and shipment loading (protects against short or mixed shipments).</li>
+</ul>
+
+<h3>3. Work-in-progress becomes a number you can trust</h3>
+
+<p>Most WIP figures on a factory floor are calculated: input minus output, adjusted by someone who knows better. Scanned bundle movement gives WIP by line, by style and by size, as it stands now. Planners stop arguing about the figure and start acting on it.</p>
+
+<h3>4. Problems become traceable backwards</h3>
+
+<p>When a shade issue or a measurement problem appears in finishing, the scan history lets you go back from the garment to the bundle, the lay and the original roll. That is the difference between holding one lot and holding a whole order.</p>
+
+<blockquote>
+  <p>A scan is only valuable if it is taken at the moment the thing actually moves. Everything else in the design follows from that.</p>
+</blockquote>
+
+<h2>Adoption on the floor: the part that decides success</h2>
+
+<p>The technology for QR tracking is mature and inexpensive. Labels, printers, handheld scanners and phones are all readily available. Projects rarely fail because of hardware. They fail because the scanning step does not fit the way people work.</p>
+
+<h3>Design for the person holding the scanner</h3>
+
+<ul>
+  <li><strong>One scan, one action.</strong> If an operator has to scan, then choose from a menu, then type a quantity, the step will be skipped when the line is busy. Default as much as possible from context.</li>
+  <li><strong>Clear feedback.</strong> A distinct sound and colour for success and for error. People on a noisy floor do not read small text.</li>
+  <li><strong>Local language.</strong> Screens and error messages in Bangla where the operators are more comfortable in Bangla.</li>
+  <li><strong>Work offline.</strong> Network coverage inside a factory is rarely perfect. Scans should queue on the device and sync when the connection returns.</li>
+  <li><strong>Labels that survive.</strong> Test label stock and placement against handling, folding and washing where relevant. A label that peels off at sewing breaks the chain.</li>
+</ul>
+
+<h3>Start small and prove it</h3>
+
+<p>Choose one flow and one section first, typically fabric receiving to cutting. Run it alongside the paper process for a short, defined period. Compare results each day. When supervisors find that the screen answers their questions faster than the register does, they will ask for the next section themselves.</p>
+
+<h3>Make the supervisor the owner</h3>
+
+<p>Floor adoption follows supervisors. Give them a simple view of their own section: what came in, what is pending, what is stuck. If the system helps them run their shift, scanning becomes part of the job rather than an extra duty.</p>
+
+<h2>Common mistakes to avoid</h2>
+
+<ol>
+  <li><strong>Scanning everything on day one.</strong> More scan points mean more chances for skipped scans and bad data. Begin with the gates that matter.</li>
+  <li><strong>Printing labels away from the point of creation.</strong> If bundle labels are printed in an office and walked to cutting, they will be mixed up. Print where the item is born.</li>
+  <li><strong>No plan for exceptions.</strong> Damaged labels, split bundles, re-cut pieces and partial cartons happen every day. The system needs a clear, permitted way to handle each one, or people will invent their own.</li>
+  <li><strong>Treating it as an IT project.</strong> Production, quality, store and commercial teams all need to agree on what each scan means. That agreement is more important than the software.</li>
+  <li><strong>Keeping the paper as the "real" record.</strong> A parallel run is sensible; a permanent one is not. Set a date when the scanned record becomes the official one.</li>
+</ol>
+
+<h2>A short readiness checklist</h2>
+
+<ul>
+  <li>Can you draw your material flow from receiving to shipment on one page, with every hand-off marked?</li>
+  <li>Have you agreed which three or four points will be gates, and what happens when a scan fails?</li>
+  <li>Do you have a named owner in production, not only in IT?</li>
+  <li>Have you tested label stock and scanners in the real environment, not in an office?</li>
+  <li>Do you know which existing systems (ERP, accounts, buyer portals) the data needs to reach?</li>
+  <li>Have you set a date to stop maintaining the parallel paper record?</li>
+</ul>
+
+<p>If most of these have a clear answer, a pilot can usually start quickly. If not, the gaps are worth closing first; they are cheaper to solve on a whiteboard than on the floor.</p>
+
+<h2>Where RAED fits</h2>
+
+<p>We build tracking and production systems that start from the floor: we walk the flow, agree the gates with the people who will scan, and pilot one section before extending. Where a factory already has an ERP or other systems, we integrate rather than replace.</p>

@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "qr-tracking-factory-floor",
+    "title": "From paper to scan: what QR tracking really changes on a factory floor",
+    "category": "Manufacturing",
+    "excerpt": "Roll to bundle to carton: how QR scanning and gates turn floor knowledge into records you can search, and why adoption decides success.",
+    "description": "What QR-based roll, bundle and carton tracking changes on a garment floor, where to place gates, and how to get operators to scan.",
+    "readTime": "6 min read",
+    "date": "2026-10-17",
+    "featured": true
+  },
+  {
+    "slug": "ldc-graduation-traceability-factory-data",
+    "title": "LDC graduation and buyer traceability: why factory data is now a business asset",
+    "category": "Industry",
+    "excerpt": "Graduation will reshape trade preferences while EU and US rules push buyers to demand proof. What is confirmed, what is pending, and what to do now.",
+    "description": "Bangladesh's LDC graduation, EU GSP changes and buyer traceability rules: what is confirmed, what is pending, and how factories can prepare.",
+    "readTime": "6 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "custom-vs-off-the-shelf-software",
+    "title": "Build, buy or both? A decision framework for custom software",
+    "category": "Strategy",
+    "excerpt": "Custom or off-the-shelf is rarely all or nothing. Six questions to help a growing business decide what to buy, what to build and what to connect.",
+    "description": "A practical framework for choosing between custom and off-the-shelf software: fit, change, integration, five-year cost, ownership and lock-in.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "practical-ai-for-business-2026",
+    "title": "Practical AI in 2026: where it earns its place, and where it doesn't",
+    "category": "AI",
+    "excerpt": "Where AI genuinely saves time in a mid-size business today, where it does not, and how to build in human review and protect your data.",
+    "description": "Where AI adds real value for mid-size businesses in 2026, where it does not, and how to handle human review and data privacy.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "spreadsheets-are-not-a-system",
+    "title": "Spreadsheets are not a system: eight signs you have outgrown Excel",
+    "category": "Operations",
+    "excerpt": "Version confusion, one person who knows the file, days lost at month-end. Eight warning signs, and a phased path from spreadsheets to a real system.",
+    "description": "Eight signs your operations have outgrown Excel, and a practical, phased path to a proper business system without a risky big-bang project.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  },
+  {
+    "slug": "scope-software-project-on-time-on-budget",
+    "title": "How to scope a software project so it lands on time and on budget",
+    "category": "Delivery",
+    "excerpt": "Most late projects fail at the start and the end. Discovery, phased releases, two-weekly demos, clear acceptance and agreed support fix both.",
+    "description": "How to scope software projects that land on time: discovery, phased delivery, two-weekly demos, acceptance criteria, warranty and support.",
+    "readTime": "5 min read",
+    "date": "2026-10-17",
+    "featured": false
+  }
+]

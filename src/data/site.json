@@ -400,5 +400,17 @@
     {
       "label": "Other"
     }
+  ],
+  "social": [
+    {
+      "name": "LinkedIn",
+      "icon": "linkedin",
+      "url": "https://www.linkedin.com/company/raed-technologies/"
+    },
+    {
+      "name": "X",
+      "icon": "x",
+      "url": "https://x.com/raedtechhq"
+    }
   ]
 }

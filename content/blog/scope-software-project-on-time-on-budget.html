@@ -1,0 +1,111 @@
+<p>Most software projects that run late do not fail in the coding. They fail at the start, when the scope is a two-page list of features that everyone reads differently, and at the end, when nobody agreed what "finished" means. The good news is that both problems are preventable. A well-scoped project is not one with a longer requirements document. It is one where the business and the developer share a clear picture of the problem, deliver in visible steps, and know in advance how work will be accepted and supported. This article sets out a practical structure you can use with any supplier.</p>
+
+<h2>Start with the problem, not the feature list</h2>
+
+<p>"We need an inventory module with barcode support and reports" is a solution. The problem underneath might be: "We regularly promise delivery dates based on stock that is not actually there." That second sentence is far more useful. It tells everyone what success looks like and lets the team find the simplest way to achieve it.</p>
+
+<p>Before any proposal, write down:</p>
+
+<ul>
+  <li><strong>The problem</strong> in one or two sentences, in business terms.</li>
+  <li><strong>Who feels it</strong>: which roles, how often, at what cost.</li>
+  <li><strong>What success looks like</strong>: something you could observe or measure after go-live.</li>
+  <li><strong>What is out of scope</strong>, explicitly. This list prevents more arguments than any other.</li>
+</ul>
+
+<h2>Phase 1: Discovery</h2>
+
+<p>Discovery is a short, paid phase before the build, usually a few weeks depending on size. Its purpose is to replace assumptions with facts. A good discovery includes:</p>
+
+<ul>
+  <li><strong>Process walk-throughs</strong> with the people who do the work, on site where possible.</li>
+  <li><strong>Collection of real documents</strong>: forms, reports, spreadsheets and sample data.</li>
+  <li><strong>An integration list</strong>: every system the new software must talk to, and how.</li>
+  <li><strong>Simple screen sketches</strong> or clickable prototypes of the main flows, reviewed with users.</li>
+  <li><strong>A prioritised backlog</strong>, split into "must have for first release" and "later".</li>
+  <li><strong>Risks and assumptions</strong>, written down and owned.</li>
+  <li><strong>A phased plan and estimate</strong> based on all of the above.</li>
+</ul>
+
+<p>Discovery also tests the working relationship. If the supplier does not ask difficult questions in these weeks, they will not ask them later either.</p>
+
+<blockquote>
+  <p>The cheapest place to change a system is on a whiteboard. The most expensive is in production.</p>
+</blockquote>
+
+<h2>Phase 2: Phased delivery</h2>
+
+<p>Break the build into releases that each deliver something usable. The first release should be the smallest version that solves the core problem for real users, not a demo, not a prototype.</p>
+
+<p>For example, a production tracking system might be phased as:</p>
+
+<ol>
+  <li>Order entry and basic status tracking for one product line.</li>
+  <li>Floor-level scanning for that line, with daily reports.</li>
+  <li>Extension to other lines, plus integration with accounts.</li>
+  <li>Dashboards, alerts and buyer-facing reports.</li>
+</ol>
+
+<p>Each phase has its own scope, estimate and acceptance. If priorities change, and they will, you adjust the next phase rather than unpicking the current one.</p>
+
+<h2>Demos every two weeks</h2>
+
+<p>Work in short cycles, commonly two weeks, and end each cycle with a live demonstration of working software to the business owner and key users. Not slides, not screenshots: the real system, on real or realistic data.</p>
+
+<p>Regular demos do three things:</p>
+
+<ul>
+  <li>They expose misunderstandings while they are still cheap to fix.</li>
+  <li>They give the business a steady, honest view of progress.</li>
+  <li>They build user familiarity long before go-live, which makes training easier.</li>
+</ul>
+
+<p>For the business, the obligation is to attend, with the right people, and to give clear feedback. A demo nobody attends is a missed checkpoint.</p>
+
+<h3>Managing change without losing control</h3>
+
+<p>New ideas will appear during demos. That is a good sign. Handle them with a simple rule: every change request is written down, estimated, and either swapped for something of similar size in the current phase or moved to a later one. Scope grows only by decision, never by drift.</p>
+
+<h2>Acceptance: define "done" before you start</h2>
+
+<p>For each phase, agree acceptance criteria in advance. Good criteria are specific and testable:</p>
+
+<ul>
+  <li>"A store user can receive a roll against a purchase order and print its label in under one minute."</li>
+  <li>"The daily report matches the manual count for five consecutive working days."</li>
+  <li>"Users without approval rights cannot approve a purchase above the set limit."</li>
+</ul>
+
+<p>Then set an acceptance window: a fixed period of user acceptance testing, run by your people on agreed scenarios, with defects classified by severity. Critical defects must be fixed before sign-off; minor ones can be scheduled. Without this structure, acceptance becomes an open-ended negotiation.</p>
+
+<h2>Warranty and support: plan for life after go-live</h2>
+
+<p>Software is used for years after it is delivered. Agree these points in the contract, not after the first problem:</p>
+
+<ul>
+  <li><strong>Warranty period.</strong> A defined period after go-live during which defects in delivered scope are fixed at no extra cost.</li>
+  <li><strong>Support terms.</strong> How issues are reported, response times by severity, and working hours.</li>
+  <li><strong>Maintenance.</strong> Security updates, backups, monitoring and hosting responsibilities.</li>
+  <li><strong>Enhancements.</strong> How new features are requested, estimated and scheduled.</li>
+  <li><strong>Ownership and handover.</strong> Who owns the source code and data, and what documentation is delivered.</li>
+</ul>
+
+<h2>A scoping checklist</h2>
+
+<ul>
+  <li>Is the problem written in business terms, with a measurable definition of success?</li>
+  <li>Is there an explicit out-of-scope list?</li>
+  <li>Has a paid discovery phase been planned before committing to the full build?</li>
+  <li>Is the first release small enough to deliver in a few months and useful on its own?</li>
+  <li>Are two-weekly demos scheduled, with named business attendees?</li>
+  <li>Is there a written change process?</li>
+  <li>Are acceptance criteria and a testing window agreed for each phase?</li>
+  <li>Are warranty, support, hosting and code ownership in the contract?</li>
+  <li>Is there a named business owner with authority to make decisions quickly?</li>
+</ul>
+
+<p>The last point matters most. Projects slow down when every decision waits for a meeting. A named owner who can say yes or no within a day keeps the whole plan on track.</p>
+
+<h2>Where RAED fits</h2>
+
+<p>This is how we run our own projects: paid discovery, phased releases, demos every two weeks, agreed acceptance criteria, and a defined warranty and support period, with ownership of code and data agreed in writing from the start.</p>
