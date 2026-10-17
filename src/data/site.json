@@ -422,5 +422,123 @@
       "icon": "instagram",
       "url": "https://www.instagram.com/raedtechnologie/"
     }
+  ],
+  "projects": [
+    {
+      "id": "al-shifa",
+      "name": "Al-Shifa",
+      "industry": "Healthcare",
+      "title": "Al-Shifa — Hospital & Appointment Platform",
+      "summary": "A multi-tenant platform for hospitals and doctors in Bangladesh. Patients find doctors and book appointments online, while hospitals run schedules, prescriptions, billing and accounting from the same system.",
+      "highlights": [
+        "Patient, doctor, hospital and admin portals, plus a native Android app, all running on one shared backend",
+        "The full appointment flow: doctor search, schedules, slot booking with serial numbers, consultation queue and digital prescriptions",
+        "A hospital back office with double-entry accounting, general ledger and financial reports, billing, collections and pharmacy",
+        "16 user roles, including doctor assistants, diagnostics and pharmacy staff, each with its own access",
+        "Built for Bangladesh: SMS one-time-password login for patients, and English and Bengali in the patient web and Android apps",
+        "Each app is deployed independently through its own automated pipeline"
+      ],
+      "stack": [
+        "Java 17",
+        "Spring Boot 3",
+        "React 18",
+        "MySQL",
+        "Kotlin (Android)",
+        "AWS S3",
+        "OpenPDF",
+        "JWT + OTP"
+      ],
+      "url": "https://shifahealthtech.com/",
+      "domain": "shifahealthtech.com",
+      "image": "/portfolio/alshifa.jpg",
+      "imageAlt": "Al-Shifa home page with doctor search and quick specialty suggestions"
+    },
+    {
+      "id": "restozen",
+      "name": "RestoZen",
+      "industry": "Restaurants",
+      "title": "RestoZen — Restaurant Management System",
+      "summary": "A complete restaurant operating system for groups running several outlets. Staff take orders at the counter, diners order from their table by QR code, and the back office runs menu, stock, campaigns and accounts in one place.",
+      "highlights": [
+        "Multi-company, multi-branch setup where each branch has its own tables, staff and menu items",
+        "QR table ordering: diners scan the table code and order from their phone, straight into the staff order queue",
+        "Separate portals for owners, admins, employees and customers, secured with signed JWT logins",
+        "Inventory and supply chain with suppliers, purchases, branch allocation, approval steps and returns to warehouse",
+        "Discount and reward-point campaigns by branch or item, with start and end dates",
+        "Accounts with numbered vouchers and daily balance sheets, plus printable invoices, barcode labels and PDF reports"
+      ],
+      "stack": [
+        "Java 17",
+        "Spring Boot 3",
+        "React 18",
+        "MySQL",
+        "JWT",
+        "AWS S3",
+        "JasperReports",
+        "GitHub Actions"
+      ],
+      "url": "https://restaurant.boniksheba.com/",
+      "domain": "restaurant.boniksheba.com",
+      "image": "/portfolio/restozen.jpg",
+      "imageAlt": "RestoZen restaurant management system sign-in screen"
+    },
+    {
+      "id": "zentopos",
+      "name": "ZentoPOS",
+      "industry": "Retail",
+      "title": "ZentoPOS — Retail POS & Back Office",
+      "summary": "A multi-branch point of sale and back-office system for retail shops. Head office manages products, suppliers and warehouse stock, branches sell by barcode, and owners see sales and accounts across the business.",
+      "highlights": [
+        "Fast barcode checkout with printed invoices and barcode labels",
+        "Head office to branch stock transfers with a full approval and receiving workflow",
+        "Purchasing and supplier management with approval and invoice receiving",
+        "Returns and exchanges at the branch, with complete return history",
+        "Order and product discounts assigned per branch, with the best discount applied automatically",
+        "Built-in accounting, daily and branch sales reports, and one-click database backup and restore"
+      ],
+      "stack": [
+        "Java 17",
+        "Spring Boot 3",
+        "React 18",
+        "MySQL",
+        "JWT",
+        "AWS S3",
+        "Chart.js",
+        "GitHub Actions"
+      ],
+      "url": "https://grocery.boniksheba.com/",
+      "domain": "grocery.boniksheba.com",
+      "image": "/portfolio/zentopos.jpg",
+      "imageAlt": "ZentoPOS sign-in screen listing real-time inventory, multi-branch operations and accounting"
+    },
+    {
+      "id": "gk-pharma",
+      "name": "GK Pharma",
+      "industry": "Pharmaceutical",
+      "title": "GK Pharma — Manufacturing & Distribution ERP",
+      "summary": "An ERP and point of sale system for a pharmaceutical manufacturer and distributor. It connects the factory, the warehouse, branch sales and the distributor network with accounting and payroll.",
+      "highlights": [
+        "Factory module covering formulas and bills of materials, production plans, batches and quality-control testing",
+        "Distributor network with commission rates, running-balance ledgers and monthly reconciliation",
+        "Automated alerts for low stock, production delays and QC failures, plus scheduled production reports",
+        "HR and payroll with attendance, leave, loans, salary structures, tax slabs and PDF payslips",
+        "Multi-branch inventory with allocations, returns to warehouse, a discount engine and QR ordering",
+        "Role-based access for owners, admins, employees and customers across multiple companies"
+      ],
+      "stack": [
+        "Java 17",
+        "Spring Boot 3",
+        "React 18",
+        "MySQL",
+        "React Query",
+        "JasperReports",
+        "AWS S3",
+        "GitHub Actions"
+      ],
+      "url": "https://gkpharma.boniksheba.com/",
+      "domain": "gkpharma.boniksheba.com",
+      "image": "/portfolio/gkpharma.jpg",
+      "imageAlt": "GK Pharma ERP sign-in screen with the GK logo"
+    }
   ]
 }

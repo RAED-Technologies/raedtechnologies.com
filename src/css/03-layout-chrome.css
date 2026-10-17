@@ -57,7 +57,7 @@
 .site-footer__bottom { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center; padding-block: 1.75rem; border-top: 1px solid var(--line-dark); font-size: var(--fs-xs); }
 .site-footer__top { display: inline-flex; align-items: center; gap: .4rem; }
 .site-footer__top .icon { width: 1em; height: 1em; transform: rotate(-45deg); }
-.site-footer__col ul.site-footer__links { grid-template-rows: repeat(4, auto); grid-auto-flow: column; grid-auto-columns: max-content; column-gap: 2.5rem; }
+.site-footer__col ul.site-footer__links { grid-template-rows: repeat(5, auto); grid-auto-flow: column; grid-auto-columns: max-content; column-gap: 2.5rem; }
 .social-links { display: flex; gap: .6rem; margin-top: 1.5rem; padding: 0; list-style: none; }
 .social-link { display: inline-grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--line-dark); border-radius: 10px; color: var(--text-inv-2); transition: color var(--dur), border-color var(--dur), background var(--dur); }
 .social-link:hover { color: var(--text-inv); border-color: rgba(127,165,255,.45); background: rgba(127,165,255,.08); }
