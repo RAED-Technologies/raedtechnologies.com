@@ -1,4 +1,4 @@
-// Careers form: client validation incl. CV file checks, fetch submit with the file, honest status messages. Works without JS via normal POST.
+// Careers form: client validation incl. CV file checks, then a normal multipart POST so the CV is attached. Works without JS too.
 (() => {
   const form = document.querySelector('[data-careers-form]');
   if (!form) return;
@@ -96,22 +96,13 @@
     if (!validate()) return;
     const subject = form.querySelector('[data-cf-subject]');
     if (subject) subject.value = `Job application: ${form.elements.position.value} — ${form.elements.name.value.trim()}`;
-    if (!window.fetch || !window.FormData) { form.submit(); return; }
     // Basic bot check: honeypot filled or submitted implausibly fast → pretend success, send nothing.
     if (form.elements._honey.value || Date.now() - started < 3000) { success(); return; }
 
+    // Native POST (not fetch): FormSubmit only forwards file attachments on a normal multipart submit.
+    // It redirects back to _next (/careers/?sent=1), which shows the success panel below.
     setLoading(true);
-    fetch(form.dataset.ajax || form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
-      .then((res) => res.json().catch(() => ({})))
-      .then((data) => {
-        if (data && String(data.success) === 'true') { success(); return; }
-        setStatus(`We couldn’t send your application right now. Please try again, or email your CV to ${fallback}.`);
-        setLoading(false);
-      })
-      .catch(() => {
-        setStatus(`We couldn’t reach the server. Please check your connection and try again, or email your CV to ${fallback}.`);
-        setLoading(false);
-      });
+    form.submit();
   });
 
   // No-JS fallback round trip: the form service redirects (_next) to /careers/?sent=1
